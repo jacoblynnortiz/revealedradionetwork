@@ -1,6 +1,49 @@
 
 const episodesContainer = document.getElementById("episodesContainer");
 
+let showMenu = document.getElementById('show-menu');
+let menuClosed = true;
+
+let link1 = document.getElementById('link1');
+let link2 = document.getElementById('link2');
+let link3 = document.getElementById('link3');
+let link4 = document.getElementById('link4');
+let link5 = document.getElementById('link5');
+
+function slide() {
+    if (window.matchMedia('screen and (max-width: 1100px)').matches) {
+        if (menuClosed == true) {
+            menuClosed = false;
+            showMenu.checked = false;
+        } else {
+            menuClosed = true;
+            showMenu.checked = false;
+        }
+    } else {
+        console.log('mobile nav not active');
+    }
+}
+
+link1.addEventListener('click', function () {
+    slide();
+});
+
+link2.addEventListener('click', function () {
+    slide();
+});
+
+link3.addEventListener('click', function () {
+    slide();
+});
+
+link4.addEventListener('click', function () {
+    slide();
+});
+
+link5.addEventListener('click', function () {
+    slide();
+});
+
 // FETCHES JSON FROM DATABASE 
 
 $.getJSON('https://api.npoint.io/f61bc06b8b82159668ee', function (podcast_episodes) {
@@ -20,13 +63,3 @@ $.getJSON('https://api.npoint.io/f61bc06b8b82159668ee', function (podcast_episod
         console.log(podcast_episodes)
     }
 });
-
-function mail() {
-
-	var email = document.getElementById('email').value;
-	var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
-	var message = document.getElementById('message').value;
-
-	window.open('mailto:theunitysharp@gmail.com?subject=' + "Name: " + name + ", " + "Email: " + email + ", " + "Phone: " + phone + ", " + ' messaged from Revealed Radio Network website!&body=' + message);
-}
