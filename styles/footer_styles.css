@@ -52,3 +52,19 @@
 .contact-footer a:hover {
     background-color: transparent;
 }
+
+.contact-footer h3 {
+    font-weight: lighter;
+    font: 1.4rem;
+    color: #4a4a4a;
+    position: absolute;
+    bottom: 25px;
+    padding: 0 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .contact-footer div {
+        padding-bottom: 45px;
+    }
+}

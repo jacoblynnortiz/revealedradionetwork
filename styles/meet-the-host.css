@@ -121,7 +121,16 @@
         width: 400px;
         height: 400px;
     }
+    .meet-the-host-col2 {
+        padding: 0;
+    }
     .meet-the-host-col2 h2 {
         font-size: 3rem;
+    }
+    .meet-the-host-container-info {
+        padding: 0;
+    }
+    .meet-the-host-container {
+        padding: 0;
     }
 }
