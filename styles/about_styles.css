@@ -11,18 +11,17 @@
 .about-container {
     width: 70%;
     min-height: 100px;
-    max-width: 1500px;
+    max-width: 1600px;
     padding: 15px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
 }
 
 .about-container-info {
     width: 100%;
     min-height: 400px;
-    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,9 +89,18 @@
     .about-col1 {
         max-height: 550px;
     }
+
+    .about-col2 img {
+        left: -150px;
+        transform: rotateY(180deg);
+    }
+
+    .about-col1 {
+        width: 1300px;
+    }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
     .about-col2 {
         display: none;
     }
