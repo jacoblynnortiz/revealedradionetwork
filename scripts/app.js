@@ -52,14 +52,23 @@ $.getJSON('https://api.npoint.io/f61bc06b8b82159668ee', function (podcast_episod
     latestEpisodeContainer.innerHTML = podcast_episodes[0].episode;
     for (let i = 0; i < 5; i++) {
         // creates new sermon post
-        let newEpisodeContainer = document.createElement("div");;
+        let newEpisodeContainer = document.createElement("div");
+        let newEpisodeInfo = document.createElement("div");
+        let newEpisodeTitle = document.createElement("h3");
+        let newEpisodeDiscription = document.createElement("p");
 
         newEpisodeContainer.classList.add("episode");
         newEpisodeContainer.setAttribute("id", i);
         newEpisodeContainer.innerHTML = podcast_episodes[i].episode;
 
+        newEpisodeTitle.innerText = podcast_episodes[i].title;
+
+        newEpisodeDiscription.innerText = podcast_episodes[i].discription;
+
         // adds episode elements to episodes container
         episodesContainer.appendChild(newEpisodeContainer);
-        console.log(podcast_episodes)
+        newEpisodeContainer.appendChild(newEpisodeInfo);
+        newEpisodeInfo.appendChild(newEpisodeTitle);
+        newEpisodeInfo.appendChild(newEpisodeDiscription);
     }
 });
