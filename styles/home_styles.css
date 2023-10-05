@@ -74,4 +74,13 @@
     .home-hero h2 {
         text-align: center;
     }
+    #latestEpisodeContainer iframe {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #latestEpisodeContainer iframe {
+        height: 250px;
+    }
 }
