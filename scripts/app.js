@@ -48,8 +48,28 @@ link5.addEventListener('click', function () {
 
 $.getJSON('https://api.npoint.io/f61bc06b8b82159668ee', function (podcast_episodes) {
 
-    let latestEpisodeContainer = document.getElementById("latestEpisodeContainer");
+    let latestEpisodeWrapper = document.getElementById("latestEpisodeContainer");
+
+    // creates new sermon post
+    let latestEpisodeContainer = document.createElement("div");
+    let latestEpisodeInfo = document.createElement("div");
+    let latestEpisodeTitle = document.createElement("h3");
+    let latestEpisodeDiscription = document.createElement("p");
+
+    latestEpisodeContainer.classList.add("episode");
+    latestEpisodeContainer.setAttribute("id", "latestEpisode");
     latestEpisodeContainer.innerHTML = podcast_episodes[0].episode;
+
+    latestEpisodeTitle.innerText = podcast_episodes[0].title;
+
+    latestEpisodeDiscription.innerText = podcast_episodes[0].discription;
+
+    // adds episode elements to episodes container
+    latestEpisodeWrapper.appendChild(latestEpisodeContainer);
+    latestEpisodeContainer.appendChild(latestEpisodeInfo);
+    latestEpisodeInfo.appendChild(latestEpisodeTitle);
+    latestEpisodeInfo.appendChild(latestEpisodeDiscription);
+
     for (let i = 0; i < 5; i++) {
         // creates new sermon post
         let newEpisodeContainer = document.createElement("div");
