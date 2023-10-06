@@ -46,7 +46,7 @@ link5.addEventListener('click', function () {
 
 // FETCHES JSON FROM DATABASE 
 
-$.getJSON('https://api.npoint.io/f61bc06b8b82159668ee', function (podcast_episodes) {
+$.getJSON('https://api.npoint.io/0e8b86f1d85b3a7ec275', function (podcast_episodes) {
 
     let latestEpisodeWrapper = document.getElementById("latestEpisodeContainer");
 
