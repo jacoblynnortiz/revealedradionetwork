@@ -92,4 +92,8 @@
     .landing-page-content h2 {
         font-size: 2rem;
     }
+
+    .header-content {
+        justify-content: center;
+    }
 }
