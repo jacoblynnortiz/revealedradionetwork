@@ -85,6 +85,14 @@
     margin-top: 25px;
 }
 
+.landing-page span {
+    font-size: 2rem;
+    color: var(--foregroundLight);
+    font-family: 'Times New Roman';
+    letter-spacing: 5px;
+    margin-top: 15px;
+}
+
 @media screen and (max-width: 700px) {
     .landing-page-content img {
         width: 250px;
