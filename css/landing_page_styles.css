@@ -101,6 +101,10 @@
         font-size: 2rem;
     }
 
+    .landing-page-content span {
+        font-size: 1.4rem;
+    }
+
     .header-content {
         justify-content: center;
     }
