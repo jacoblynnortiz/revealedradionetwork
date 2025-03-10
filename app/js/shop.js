@@ -44,7 +44,7 @@ addItemBtn.addEventListener('click', function (e) {
 
 // renders the shop items based on what category you clicked
 
-if (document.URL == 'https://truthtabgranite.site/shop.html#all' || document.URL == 'https://truthtabgranite.site/shop.html' || document.URL == 'http://127.0.0.1:5500/shop.html#all' || document.URL == 'http://127.0.0.1:5500/shop.html') {
+if (document.URL == 'https://revealedradionetwork.site/shop.html#all' || document.URL == 'https://revealedradionetwork.site/shop.html' || document.URL == 'http://127.0.0.1:5500/shop.html#all' || document.URL == 'http://127.0.0.1:5500/shop.html') {
     $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
         let shopItemsContainer = document.getElementById('shopItemsContainer');
 
@@ -78,7 +78,7 @@ if (document.URL == 'https://truthtabgranite.site/shop.html#all' || document.URL
             shopItemsContainer.appendChild(shopItemContainer);
         }
     });
-} else if (document.URL == 'https://truthtabgranite.site/shop.html#books' || document.URL == 'http://127.0.0.1:5500/shop.html#books') {
+} else if (document.URL == 'https://revealedradionetwork.site/shop.html#books' || document.URL == 'http://127.0.0.1:5500/shop.html#books') {
     $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
         let shopItemsContainer = document.getElementById('shopItemsContainer');
 
@@ -117,7 +117,7 @@ if (document.URL == 'https://truthtabgranite.site/shop.html#all' || document.URL
             }
         }
     });
-} else if (document.URL == 'https://truthtabgranite.site/shop.html#pens' || document.URL == 'http://127.0.0.1:5500/shop.html#pens') {
+} else if (document.URL == 'https://revealedradionetwork.site/shop.html#pens' || document.URL == 'http://127.0.0.1:5500/shop.html#pens') {
     $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
         let shopItemsContainer = document.getElementById('shopItemsContainer');
 
@@ -156,7 +156,7 @@ if (document.URL == 'https://truthtabgranite.site/shop.html#all' || document.URL
             }
         }
     });
-} else if (document.URL == 'https://truthtabgranite.site/shop.html#shirts' || document.URL == 'http://127.0.0.1:5500/shop.html#shirts') {
+} else if (document.URL == 'https://revealedradionetwork.site/shop.html#shirts' || document.URL == 'http://127.0.0.1:5500/shop.html#shirts') {
     $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
         let shopItemsContainer = document.getElementById('shopItemsContainer');
 
