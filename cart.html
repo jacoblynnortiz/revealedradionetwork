@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="app/css/cart_styling.css">
     <link rel="stylesheet" href="app/css/components/footer_styles.css">
 </head>
+
 <body>
     <div id="header" data-pagetype="main"></div>
     <main class="content">
@@ -37,7 +39,7 @@
                         <div class="checkout">
                             <h4>Subtotal <span id="totalPrice2">[$price]</span></h4>
 
-                            <button class="rrn-btn wide">Checkout</button>
+                            <button id="openCheckout" class="rrn-btn wide">Checkout</button>
                         </div>
                     </div>
                 </div>
@@ -45,6 +47,39 @@
             <div class="you-may-like-container">
                 <h2>You may also like</h2>
                 <div class="suggested-items-container" id="suggestedItemsContainer"></div>
+            </div>
+        </div>
+        <div id="checkoutContainer" class="checkout-container">
+            <button class="close-checkout-btn" id="closeCheckout"><i class="fa-solid fa-x"></i></button>
+            <div class="checkout-form">
+                <h3>Checkout</h3>
+                <form>
+                    <h4>Contact</h4>
+                    <input id="email" type="email" required placeholder="E-mail address">
+                    <h4>Shipping</h4>
+                    <input id="name" type="text" required placeholder="Full name">
+                    <input id="address" type="text" required placeholder="Street address">
+                    <input id="lotType" type="text" placeholder="Apartment, suite, etc. (optional)">
+                    <div class="address-input-row">
+                        <input id="city" type="text" required placeholder="City">
+                        <input id="state" type="text" required placeholder="State">
+                        <input id="zipcode" type="text" required placeholder="Zip code">
+                    </div>
+                    <h4>Payment</h4>
+                    <div class="payment-input-container">
+                        <div class="payment-input-row">
+                            <input id="cardNumber" style="max-width: 55%;" type="number" required minlength="16" maxlength="16"
+                                placeholder="1234 1234 1234 1234">
+                            <input id="cardExp" style="max-width: 22.5%;" type="text" required minlength="5" maxlength="5" placeholder="MM/YY">
+                            <input id="cardCVC" style="max-width: 22.5%;" type="number" required minlength="3" maxlength="3" placeholder="CVC">
+                        </div>
+                        <div class="payment-input-row">
+                            <input id="cardName" type="text" required placeholder="Full Name">
+                            <input id="cardZipcode" type="number" required placeholder="Zip code">
+                        </div>
+                    </div>
+                    <button id="completeOrder" class="rrn-btn wide">Complete order</button>
+                </form>
             </div>
         </div>
     </main>
@@ -59,5 +94,17 @@
 
     <script src="app/js/cart.js"></script>
     <script src="app/js/generateSuggestedItems.js"></script>
+    <script src="app/js/checkout.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "BRMpXveNMRzs8qqvl",
+            });
+        })();
+    </script>
 </body>
+
 </html>

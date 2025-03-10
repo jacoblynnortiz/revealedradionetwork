@@ -15,33 +15,6 @@ if (ls.getItem('rrnCart') == '') {
     localStorage.setItem("rrnCart", rrnDefaultCartString)
 }
 
-// Retrieving the string
-let cartItemsString = localStorage.getItem("rrnCart");
-
-// turns string back into JSON
-let cartItems = JSON.parse(cartItemsString);
-
-// window.location = 'index.html';
-
-addItemBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    let newItemIDString = addItemIDInput.value;
-    let newItemQuantityString = parseInt(quantityInput.value);
-
-    let newItem = { 'itemID': newItemIDString, 'quantity': newItemQuantityString }
-
-    cartItems.push(newItem);
-
-    addItemIDInput.value = '';
-
-    let cartItemsString = JSON.stringify(cartItems);
-
-    ls.setItem("rrnCart", cartItemsString);
-
-    window.location = 'shop.html';
-});
-
 // renders the shop items based on what category you clicked
 
 if (document.URL == 'https://revealedradionetwork.site/shop.html#all' || document.URL == 'https://revealedradionetwork.site/shop.html' || document.URL == 'http://127.0.0.1:5500/shop.html#all' || document.URL == 'http://127.0.0.1:5500/shop.html') {
@@ -215,7 +188,7 @@ function addItem(itemID) {
     // turns string back into JSON
     let cartItems = JSON.parse(cartItemsString);
 
-    let newCartItem = {"itemID": itemID, "quantity": 1}
+    let newCartItem = { "itemID": itemID, "quantity": 1 }
 
     cartItems.push(newCartItem);
 
@@ -225,5 +198,25 @@ function addItem(itemID) {
 
     localStorage.setItem("rrnCart", rrnCartItemsString);
 
-    window.location = 'shop.html';
+    let addItemPopup = document.getElementById('addItemPopup');
+    let addItemPopPreview = document.getElementById('addItemPopPreview');
+    let addItemTitle = document.getElementById('addItemTitle');
+
+    addItemPopup.classList.add('pop');
+
+    $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
+        for (let i = 0; i < rrnShopItems.length; i++) {
+            if (newCartItem.itemID == rrnShopItems[i].itemID) {
+                addItemPopPreview.src = rrnShopItems[i].itemImagePreview;
+                addItemTitle.innerText = '('+rrnShopItems[i].itemTitle+')';
+
+                let cartItems = document.getElementById('cartItems');
+                cartItems.style.display = 'flex';
+            }
+        }
+    });
+
+    setTimeout(() => {
+        addItemPopup.classList.remove('pop');
+    }, "6000");
 }

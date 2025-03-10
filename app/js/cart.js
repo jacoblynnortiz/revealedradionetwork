@@ -158,7 +158,6 @@ function deleteItem(item) {
 let currentCart = ls.getItem('rrnCart');
 
 setInterval(() => {
-    console.log('test');
     if (currentCart != ls.getItem('rrnCart')) {
         window.location.reload();
     }

@@ -213,6 +213,68 @@ form input[type='number']:focus {
 	background-color: transparent;
 }
 
+/* added item popup styling */
+
+.added-item-popup {
+    position: fixed;
+    bottom: -150px;
+    right: 15px;
+    border: 3px solid var(--accent-color);
+    border-radius: var(--roundedCorners);
+    background-color: var(--primary-color);
+    z-index: 3;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateY(250px);
+    min-height: 100px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.added-item-popup img {
+    width: 75px;
+    height: 75px;
+    border-radius: 18px;
+    border-radius: var(--roundedCorners);
+}
+
+.added-item-popup h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    padding-left: 15px;
+    text-align: left;
+    transition: .3s;
+}
+
+.added-item-popup h4 span {
+    font-weight: 700;
+}
+
+.pop {
+    animation: itemAdded 6s forwards ease-in-out;
+}
+
+@keyframes itemAdded {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-165px);
+    }
+
+    60% {
+        transform: translateY(-165px);
+    }
+
+    100% {
+        transform: translateY(165px);
+    }
+}
+
 @media screen and (max-width: 1400px) {
 
     .shop-container h2 {
@@ -253,5 +315,11 @@ form input[type='number']:focus {
     .shop-header::before {
         border-bottom-left-radius: 20%;
         border-bottom-right-radius: 20%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .added-item-popup {
+        max-width: 300px;
     }
 }

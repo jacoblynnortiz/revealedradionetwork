@@ -20,12 +20,12 @@
     <main class="content">
         <div class="contact-form-container">
             <h2>Contact Us</h2>
-            <form action="app/js/contactForm.php" method="post">
-                <input type="text" required name="name" placeholder="Full Name">
-                <input type="email" required name="email" placeholder="Email">
-                <input type="text" required name="subject" placeholder="Subject">
-                <textarea minlength="100" name="message" placeholder="Your Message..."></textarea>
-                <input type="submit" value="Send" name="submit">
+            <form>
+                <input type="text" required id="name" placeholder="Full Name">
+                <input type="email" required id="email" placeholder="Email">
+                <input type="text" required id="subject" placeholder="Subject">
+                <textarea minlength="100" id="message" placeholder="Your Message..."></textarea>
+                <input type="submit" value="Send" id="sendBtn">
             </form>
             <div class="ring-1"></div>
             <div class="ring-2"></div>
@@ -40,6 +40,18 @@
     <script src="app/js/main.js"></script>
     <script src="app/js/components/header.js"></script>
     <script src="app/js/components/footer.js"></script>
+
+    <script src="app/js/contactForm.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "BRMpXveNMRzs8qqvl",
+            });
+        })();
+    </script>
 </body>
 
 </html>
