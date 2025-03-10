@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRN Shop</title>
+    <link rel="icon" href="res/images/icon.png">
+
+    <link rel="stylesheet" href="app/css/components/globals.css">
+    <link rel="stylesheet" href="app/css/components/header_styles.css">
+    <link rel="stylesheet" href="app/css/shop_styling.css">
+    <link rel="stylesheet" href="app/css/components/footer_styles.css">
+</head>
+<body>
+    <div id="header" data-pagetype="main"></div>
+    <main class="content">
+        <div class="shop-header">
+            <h2>Shop</h2>
+        </div>
+        <div class="shop-container-max">
+            <div class="shop-container">
+                <h2 id="shopTypeHeader">Shop</h2>
+                <div class="shop-items-container" id="shopItemsContainer"></div>
+            </div>
+        </div>
+        <form>
+            <h2>Add item</h2>
+            <input id="addItemIDInput" type="number" placeholder="Shop Item ID">
+            <input id="quantityInput" type="number" placeholder="Quantity">
+            <input class="rrn-btn wide" id="addItemBtn" type="submit" value="Add to cart">
+        </form>
+    </main>
+    <div id="footer" data-pagetype="main"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="app/js/main.js"></script>
+    <script src="app/js/components/header.js"></script>
+    <script src="app/js/components/footer.js"></script>
+
+    <script src="app/js/shop.js"></script>
+</body>
+</html>

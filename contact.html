@@ -1,0 +1,45 @@
+<!-- Designed and developed by Jacob Ortiz | Ortiz Design & Development -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revealed Radio Network | Contact</title>
+    <link rel="icon" href="res/images/icon.png">
+
+    <link rel="stylesheet" href="app/css/components/globals.css">
+    <link rel="stylesheet" href="app/css/components/header_styles.css">
+    <link rel="stylesheet" href="app/css/contact_styles.css">
+    <link rel="stylesheet" href="app/css/components/footer_styles.css">
+</head>
+
+<body>
+    <div id="header" data-pagetype="main"></div>
+    <main class="content">
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <form action="app/js/contactForm.php" method="post">
+                <input type="text" required name="name" placeholder="Full Name">
+                <input type="email" required name="email" placeholder="Email">
+                <input type="text" required name="subject" placeholder="Subject">
+                <textarea minlength="100" name="message" placeholder="Your Message..."></textarea>
+                <input type="submit" value="Send" name="submit">
+            </form>
+            <div class="ring-1"></div>
+            <div class="ring-2"></div>
+            <div class="ring-3"></div>
+        </div>
+    </main>
+    <div id="footer" data-pagetype="main"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="app/js/main.js"></script>
+    <script src="app/js/components/header.js"></script>
+    <script src="app/js/components/footer.js"></script>
+</body>
+
+</html>

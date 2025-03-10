@@ -1,0 +1,666 @@
+.content {
+    padding: 0;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+.content h2 {
+    font-size: 3rem;
+    color: var(--foregroundLight-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.meetthehost-header {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background: url('../../res/images/headers/meetthehost-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.meetthehost-header::before {
+    content: '';
+    background-color: #00000070;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    z-index: 1;
+}
+
+.meetthehost-header h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.meetthehost-header h2::before,
+.meetthehost-header h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    width: 20px;
+    height: 5px;
+    border-radius: 12px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.meetthehost-header h2::after {
+    left: auto;
+    right: -35px;
+}
+
+.meetthehost-row {
+    width: 100%;
+    min-height: 200px;
+    max-width: 1400px;
+}
+
+.meetthehost-container-max {
+    width: 100%;
+    position: relative;
+}
+
+.meetthehost-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    min-height: 0;
+}
+
+.meetthehost-card {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 0px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.meetthehost-profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 20px solid var(--primary-color);
+    background: url('../../res/images/faces/johnwilson.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: -150px;
+    left: calc(50% - 150px);
+}
+
+.meetthehost-profile::after {
+    content: 'Hover me!';
+    padding: 5px 15px;
+    border-radius: var(--roundedCorners);
+    background-color: var(--accent-color);
+    color: #fff;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .3s;
+}
+
+.meetthehost-card:hover > .meetthehost-card-content {
+    width: 100%;
+    height: 520px;
+    z-index: 1;
+    padding: 25px;
+}
+
+.meetthehost-card:hover > .meetthehost-profile::after {
+    opacity: 0;
+}
+
+.meetthehost-card-content {
+    width: 0;
+    height: 0;
+    background-color: #c0c0c0;
+    border-radius: var(--roundedCorners);
+    transition: .3s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.meetthehost-card-content h3 {
+    margin-top: 150px;
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.meetthehost-card-content p {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100ch;
+    font-size: var(--normalTextSize);
+    line-height: 1.6;
+}
+
+.meetthehost-socials {
+    width: 100%;
+    min-height: 60px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meetthehost-socials a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+    color: var(--foregroundLight-color);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin: 15px;
+    margin-bottom: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.meetthehost-socials a:hover {
+    border: 3px solid var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+.meetthehost-card-content-wide .meetthehost-socials {
+    padding-left: 150px;
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+.meetthehost-card-content-wide-reverse .meetthehost-socials {
+    justify-content: flex-start;
+}
+
+.meetthehost-card-content-wide .meetthehost-socials a,
+.meetthehost-card-content-wide-reverse .meetthehost-socials a {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+    .meetthehost-card-content {
+        width: 100%;
+        min-height: 500px;
+        height: unset;
+        z-index: 1;
+        padding: 25px;
+    }
+
+    .meetthehost-profile {
+        cursor: default;
+    }
+    
+    .meetthehost-profile::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card:hover > .meetthehost-card-content {
+        width: 100%;
+        min-height: 500px;
+        height: unset;
+        z-index: 1;
+        padding: 25px;
+    }
+    
+    .meetthehost-card:hover > .meetthehost-profile::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card-content-wide .meetthehost-socials {
+        padding-left: 0;
+        justify-content: center;
+        margin-left: 0;
+    }
+    
+    .meetthehost-card-content-wide-reverse .meetthehost-socials {
+        justify-content: center;
+    }
+    
+    .meetthehost-card-content-wide .meetthehost-socials a,
+    .meetthehost-card-content-wide-reverse .meetthehost-socials a {
+        margin: 15px;
+    }
+}
+
+.meetthehost-row-wide {
+    width: 100%;
+    min-height: 200px;
+    max-width: 1400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.meetthehost-container-wide {
+    width: 90%;
+    max-width: 1400px;
+    padding-top: 200px;
+    min-height: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.meetthehost-card-wide {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 0px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.meetthehost-profile-wide {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 20px solid var(--primary-color);
+    background: url('../../res/images/faces/default.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: -150px;
+}
+
+.meetthehost-profile-wide::after {
+    content: 'Hover me!';
+    padding: 5px 15px;
+    border-radius: var(--roundedCorners);
+    background-color: var(--accent-color);
+    color: #fff;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .3s;
+}
+
+.meetthehost-profile-wide:hover ~ .meetthehost-card-content-wide {
+    width: 100%;
+    z-index: 1;
+    padding: 25px;
+}
+
+.meetthehost-card-wide:hover > .meetthehost-profile-wide::after {
+    opacity: 0;
+}
+
+.meetthehost-card-content-wide {
+    width: 0;
+    height: 385px;
+    background-color: #c0c0c0;
+    border-radius: var(--roundedCorners);
+    transition: .3s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.meetthehost-card-content-wide h3 {
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: left;
+    padding-left: 150px;
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.meetthehost-card-content-wide p {
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 150px;
+    max-width: 100ch;
+    font-size: var(--normalTextSize);
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 1000px) {
+    .meetthehost-card-content-wide {
+        width: 100%;
+        min-height: 500px;
+        height: unset;
+        z-index: 1;
+        padding: 25px;
+    }
+
+    .meetthehost-profile-wide {
+        cursor: default;
+    }
+    
+    .meetthehost-profile-wide::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card-wide:hover > .meetthehost-card-content-wide {
+        width: 100%;
+        min-height: 500px;
+        height: unset;
+        z-index: 1;
+        padding: 25px;
+    }
+    
+    .meetthehost-card-wide:hover > .meetthehost-profile-wide::after {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .meetthehost-container {
+        padding-bottom: 0;
+    }
+    .meetthehost-row, .meetthehost-row-wide {
+        min-height: 400px;
+        margin-bottom: 165px;
+    }
+    .meetthehost-row-wide-last {
+        margin-bottom: 45px;
+    }
+    .meetthehost-container-wide {
+        padding-top: 0;
+    }
+
+    .meetthehost-card-content-wide {
+        width: 100%;
+        min-height: 510px;
+        z-index: 1;
+        padding: 25px;
+    }
+
+    .meetthehost-profile-wide {
+        left: unset;
+        top: -150px;
+        cursor: default;
+    }
+
+    .meetthehost-profile-wide {
+        left: calc(50% - 150px);
+    }
+    
+    .meetthehost-profile-wide::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card-wide:hover > .meetthehost-card-content-wide {
+        width: 100%;
+        min-height: 500px;
+        z-index: 1;
+        padding: 25px;
+    }
+    
+    .meetthehost-card-wide:hover > .meetthehost-profile-wide::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card-content-wide h3 {
+        margin-bottom: 25px;
+        margin-top: 150px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .meetthehost-card-content-wide p {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+    }
+    .meetthehost-card-content-wide .meetthehost-socials {
+        margin-bottom: 0;
+    }
+}
+
+.meetthehost-row-wide-reverse {
+    width: 100%;
+    min-height: 200px;
+    max-width: 1400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.meetthehost-container-wide-reverse {
+    width: 90%;
+    max-width: 1400px;
+    padding-top: 200px;
+    min-height: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.meetthehost-card-wide-reverse {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 0px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.meetthehost-profile-wide-reverse {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 20px solid var(--primary-color);
+    background: url('../../res/images/faces/default.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: calc(50% - 150px);
+    right: -150px;
+}
+
+.meetthehost-profile-wide-reverse::after {
+    content: 'Hover me!';
+    padding: 5px 15px;
+    border-radius: var(--roundedCorners);
+    background-color: var(--accent-color);
+    color: #fff;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .3s;
+}
+
+.meetthehost-profile-wide-reverse:hover ~ .meetthehost-card-content-wide-reverse {
+    width: 100%;
+    z-index: 1;
+    padding: 25px;
+}
+
+.meetthehost-card-wide-reverse:hover > .meetthehost-profile-wide-reverse::after {
+    opacity: 0;
+}
+
+.meetthehost-card-content-wide-reverse {
+    width: 0;
+    height: 385px;
+    background-color: #c0c0c0;
+    border-radius: var(--roundedCorners);
+    transition: .3s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.meetthehost-card-content-wide-reverse h3 {
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 150px;
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.meetthehost-card-content-wide-reverse p {
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 150px;
+    max-width: 100ch;
+    font-size: var(--normalTextSize);
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 1000px) {
+    .meetthehost-card-content-wide-reverse {
+        width: 100%;
+        min-height: 500px;
+        height: unset;
+        z-index: 1;
+        padding: 25px;
+    }
+
+    .meetthehost-profile-wide-reverse {
+        cursor: default;
+    }
+    
+    .meetthehost-profile-wide::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card-wide-reverse:hover > .meetthehost-card-content-wide-reverse {
+        width: 100%;
+        min-height: 500px;
+        height: unset;
+        z-index: 1;
+        padding: 25px;
+    }
+    
+    .meetthehost-card-wide-reverse:hover > .meetthehost-profile-wide-reverse::after {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .meetthehost-container-reverse {
+        padding-bottom: 0;
+    }
+    .meetthehost-row-reverse, .meetthehost-row-wide-reverse {
+        min-height: 400px;
+        margin-bottom: 165px;
+    }
+    .meetthehost-row-wide-last {
+        margin-bottom: 45px;
+    }
+    .meetthehost-container-wide-reverse {
+        padding-top: 0;
+    }
+
+    .meetthehost-card-content-wide-reverse {
+        width: 100%;
+        min-height: 520px;
+        z-index: 1;
+        padding: 25px;
+    }
+
+    .meetthehost-profile-wide-reverse {
+        left: unset;
+        top: -150px;
+        cursor: default;
+    }
+
+    .meetthehost-profile-wide-reverse {
+        left: calc(50% - 150px);
+    }
+    
+    .meetthehost-profile-wide-reverse::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card-wide-reverse:hover > .meetthehost-card-content-wide-reverse {
+        width: 100%;
+        min-height: 500px;
+        z-index: 1;
+        padding: 25px;
+    }
+    
+    .meetthehost-card-wide-reverse:hover > .meetthehost-profile-wide-reverse::after {
+        opacity: 0;
+    }
+
+    .meetthehost-card-content-wide-reverse h3 {
+        margin-bottom: 25px;
+        margin-top: 150px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .meetthehost-card-content-wide-reverse p {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+    }
+    .meetthehost-card-content-wide-reverse .meetthehost-socials {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .meetthehost-header {
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+        min-height: 300px;
+    }
+    
+    .meetthehost-header::before {
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+    }
+}

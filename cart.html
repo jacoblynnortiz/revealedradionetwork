@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revealed Radio Network | Cart</title>
+    <link rel="icon" href="res/images/icon.png">
+
+    <link rel="stylesheet" href="app/css/components/globals.css">
+    <link rel="stylesheet" href="app/css/components/header_styles.css">
+    <link rel="stylesheet" href="app/css/cart_styling.css">
+    <link rel="stylesheet" href="app/css/components/footer_styles.css">
+</head>
+<body>
+    <div id="header" data-pagetype="main"></div>
+    <main class="content">
+        <div class="cart-container-max">
+            <div class="cart-empty-container" id="cartEmptyContainer">
+                <h2>Your Shopping Cart is Empty</h2>
+                <a href="shop.html"><button class="rrn-btn">Start Shopping</button></a>
+            </div>
+            <div class="cart-container" id="cartContainer">
+                <h3><span id="itemsAmount">[items]</span> in your cart for <span id="totalPrice1">[$price]</span></h3>
+                <div class="cart-table">
+                    <div class="cart-header">
+                        <h4 style="width: 60%;">Item</h4>
+                        <h4 style="width: 20%;">Quantity</h4>
+                        <h4 style="width: 20%;">Price</h4>
+                    </div>
+                    <div class="cart-items" id="cartItemsList"></div>
+                    <div class="cart-footer">
+                        <div class="continue-shopping">
+                            <a href="shop.html">
+                                <button class="rrn-btn-outline wide">Back to Shopping</button>
+                            </a>
+                        </div>
+                        <div class="checkout">
+                            <h4>Subtotal <span id="totalPrice2">[$price]</span></h4>
+
+                            <button class="rrn-btn wide">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="you-may-like-container">
+                <h2>You may also like</h2>
+                <div class="suggested-items-container" id="suggestedItemsContainer"></div>
+            </div>
+        </div>
+    </main>
+    <div id="footer" data-pagetype="main"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="app/js/main.js"></script>
+    <script src="app/js/components/header.js"></script>
+    <script src="app/js/components/footer.js"></script>
+
+    <script src="app/js/cart.js"></script>
+    <script src="app/js/generateSuggestedItems.js"></script>
+</body>
+</html>

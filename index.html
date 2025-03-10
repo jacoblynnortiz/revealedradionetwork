@@ -1,77 +1,94 @@
+<!-- Designed and developed by Jacob Ortiz | Ortiz Design & Development -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the offcial website Revealed Radio Network website.">
+    <meta name="keywords" content="podcasts, podcast, rrn, RRN, Revealed Radio Network, news">
+    <meta name="author" content="John Wilson III">
     <title>Revealed Radio Network</title>
     <link rel="icon" href="res/images/icon.png">
 
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/landing_page_styles.css">
+    <link rel="stylesheet" href="app/css/components/globals.css">
+    <link rel="stylesheet" href="app/css/components/header_styles.css">
+    <link rel="stylesheet" href="app/css/home_styles.css">
+    <link rel="stylesheet" href="app/css/components/footer_styles.css">
 </head>
 
 <body>
-    <!-- Header -->
-
-    <div class="header">
-        <div class="header-content">
-            <h1 class="logo"><a href="#"><img src="res/images/logo-header.png"></a></h1>
-        </div>
-    </div>
-
-    <!-- Content -->
-
-    <div class="content">
-        <div class="landing-page">
+    <div id="header" data-pagetype="main"></div>
+    <main class="content">
+        <div class="home-hero">
             <video loop autoplay muted>
-                <source src="res/images/landing-page-background.mp4">
+                <source
+                    src="res/images/home-hero-bg.mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="landing-page-content">
-                <img src="res/images/icon.png">
-                <h2>Coming soon...</h2>
-                <span data-cdt-id="6142940">--:--:--:--</span>
+            <div class="home-hero-content">
+                <img src="res/images/logo.png">
+                <h2>Turning America right side up.</h2>
+                <a href="#listenNow" class="rrn-btn">Listen now</a>
             </div>
         </div>
-    </div>
+        <div id="listenNow" class="rrn-podcasts">
+            <h2>RRN Podcasts</h2>
+            <div class="podcasts-container">
+                <div class="podcast-card">
+                    <a href="shows/theoracle.html">
+                        <div class="podcast-card-inner">
+                            <img src="res/images/rrn_podcasts/theoracle-preview.jpg" alt="#">
+                            <h3>The Oracle</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quam ad itaque earum odio commodi dolores doloribus incidunt ab doloremque, molestiae blanditiis laudantium obcaecati placeat quidem dolore aut sunt assumenda.</p>
+                        </div>
+                    </a>
+                    <div class="podcast-listen">
+                        <a href="https://open.spotify.com/show/1bpj3ijzEU2YDiHfupa9HI"><div class="listen-spotify-btn"></div></a>
+                        <a href="https://podcasts.apple.com/us/podcast/revealed-radio-network/id1538712915"><div class="listen-apple-btn"></div></a>
+                    </div>
+                    <div class="podcast-socials">
+                        <a class="socials-link" href="https://www.facebook.com/RevealedRadioNetwork"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="socials-link" href="https://www.instagram.com/revealedradionetwork/"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="socials-link" href="https://www.youtube.com/@revealedradionetwork676"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="podcast-card">
+                    <a href="shows/therevealedreport.html">
+                        <div class="podcast-card-inner">
+                            <img src="res/images/rrn_podcasts/therevealedreport-preview.jpg" alt="#">
+                            <h3>The Revealed Report</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse quam ad itaque earum odio commodi dolores doloribus incidunt ab doloremque, molestiae blanditiis laudantium obcaecati placeat quidem dolore aut sunt assumenda.</p>
+                        </div>
+                    </a>
+                    <div class="podcast-listen">
+                        <a href="https://open.spotify.com/show/1bpj3ijzEU2YDiHfupa9HI"><div class="listen-spotify-btn"></div></a>
+                        <a href="https://podcasts.apple.com/us/podcast/revealed-radio-network/id1538712915"><div class="listen-apple-btn"></div></a>
+                    </div>
+                    <div class="podcast-socials">
+                        <a class="socials-link" href="https://www.facebook.com/RevealedRadioNetwork"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="socials-link" href="https://www.instagram.com/revealedradionetwork/"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="socials-link" href="https://www.youtube.com/@revealedradionetwork676"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recent-videos">
+            <h2>Recent videos <a class="rrn-btn" href="https://www.youtube.com/@revealedradionetwork676">Visit channel</a></h2>
+            <div id="recentVideosContainer" class="recent-videos-container"></div>
+        </div>
+    </main>
+    <div id="footer" data-pagetype="main"></div>
 
-    <script src="app/global.js"></script>
-    <script>
-        if (window.oc == undefined) {
-            window.oc = {};
-        };
-        /*var oc = window.oc;*/;
-        if (window.oc.remainingTimeAtStartTime === undefined) {
-            window.oc.remainingTimeAtStartTime = 90895;
-            var generatedAt = 1741491905;
-            var staleBy = Math.round((new Date()).getTime() / 1000) - generatedAt;
-            window.oc.remainingTimeAtStartTime -= staleBy;
-        }
-        !function () {
-            window.oc.wParams = { "title": "Coming Soon...", "date_label": "March 10, 2025", "bg_color": "transparent", "txt_color": "FFFFFFFF", "unit_labels": "days,hours,minutes,seconds" };
-            window.oc.startTime = new Date().getTime() / 1000;
-            window.oc.countDirection = 1;
-            window.oc.scale = 1.109;
-            window.oc.repeatMode = 0;
-            window.oc.showMilliseconds = false;
-            window.oc.unitLabels = "d,h,m,s".split(",");
-            window.oc.countdownExpired = function () {
-                if (window.oc.repeatMode > 0) {
-                    if (window.oc.editor) {
-                        window.oc.editor.countdownExpired();
-                    } else {
-                        if (oc.timerRef)
-                            clearInterval(oc.timerRef);
-                        location.reload();
-                    }
-                }
-            };
-            var $__container_oc, __scope_oc, bgColor, bgOpacity, bgRGBA, pad, periods, txtColor, update; __scope_oc = window.oc, $__container_oc = document.querySelectorAll("[data-cdt-id='6142940']"),
-            bgRGBA = parseInt(__scope_oc.wParams.bg_color, 16), bgOpacity = 255 & bgRGBA, bgColor = __scope_oc.wParams.bg_color.substr(0, 6), txtColor = __scope_oc.wParams.txt_color.substr(0, 6), periods = { d: 86400, h: 3600, m: 60 }, pad = function (o) { for (; o.toString().length < 2;)o = "0" + o; return o }, update = function () { var o, e, _, t, c, r, a, n, p, i, s, d; for (r = __scope_oc.unitLabels, n = (new Date).getTime() / 1e3, e = n - __scope_oc.startTime, e *= __scope_oc.countDirection, p = Math.max(0, Math.round(__scope_oc.remainingTimeAtStartTime - e)), 0 === p && __scope_oc.countdownExpired(), o = p - p % periods.d, _ = p - o - p % periods.h, a = p - o - _ - p % periods.m, s = p - o - _ - a, d = [o / periods.d, pad(_ / periods.h), pad(a / periods.m), pad(s)], c = 0 === o ? "" + d[1] + r[1] + " " + d[2] + r[2] + " " + d[3] + r[3] : "" + d[0] + r[0] + " " + d[1] + r[1] + " " + d[2] + r[2] + " " + d[3] + r[3], t = $__container_oc.length, i = []; t--;)$__container_oc[t].innerHTML = c, $__container_oc[t].style.color = "#" + txtColor, bgOpacity ? i.push($__container_oc[t].style.background = "#" + bgColor) : i.push(void 0); return i }, update(), __scope_oc.timerRef && clearInterval(__scope_oc.timerRef), __scope_oc.timerRef = setInterval(update, 100), __scope_oc.updateCountdownClock = update;
-        }.call(this);
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="app/js/main.js"></script>
+    <script src="app/js/components/header.js"></script>
+    <script src="app/js/components/footer.js"></script>
+
+    <script src="app/js/recentVideos.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="icon" href="res/images/admin-icon.png">
+
+    <link rel="stylesheet" href="app/css/components/globals.css">
+    <link rel="stylesheet" href="app/css/adminPanel/admin-panel.css">
+</head>
+
+<body>
+    <div id="sessionExpired">
+        <div class="session-expired-box">
+            <h3>Session Expired</h3>
+            <p>Please login again.</p>
+            <a href="administrative-login.html">OK</a>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header-section">
+            <h1 id="sectionTitle"></h1>
+        </div>
+        <div class="header-section">
+            <div id="profilePicture" class="profile-picture"></div>
+            <div class="menu">
+                <a href="tel:3143309388">
+                    <div class="manage-account">
+                        <div id="profilePictureMenu" class="profile-picture-menu"></div>
+                        <div class="account-info">
+                            <span id="userFullName">Full Name</span>
+                            <span id="userEmail">username@gmail.com</span>
+                            <h3>Manage Account</h3>
+                        </div>
+                    </div>
+                </a>
+                <div class="menu-actions">
+                    <button title="Settings"><i class="fa-solid fa-gear"></i>
+                        <div style="width: 20px;"></div>Settings
+                    </button>
+                    <a href="administrative-login.html">
+                        <button title="Signout" class="signout-btn"><i class="fa-solid fa-right-from-bracket"></i>
+                            <div style="width: 20px;"></div>Sign out
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="side-nav">
+        <div class="logo-section">
+            <a href="#"><img class="logo" src="res/images/admin-icon.png"></a>
+            <span class="version-tag">BETA</span>
+        </div>
+        <div class="tab-links-section">
+            <ul>
+                <li>
+                    <a href="sectionHome" class="tab-active" data-navBtnCell="Home">
+                        <i class="fa-solid fa-house"></i>
+                        <div style="width: 20px;" class="spacer"></div>
+                    </a>
+                </li>
+                <div class="seperator"></div>
+                <li>
+                    <a href="sectionDashboard" class="tab-inactive" data-navBtnCell="Dashboard">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div style="width: 20px;" class="spacer"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="sectionUserLogs" class="tab-inactive" data-navBtnCell="User Logs">
+                        <i class="fa-solid fa-server"></i>
+                        <div style="width: 20px;" class="spacer"></div>
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+    <main class="content">
+        <section class="tab-section" id="sectionHome">
+            <div class="note priority-high">
+                <h2><i class="fa-solid fa-warning"></i>
+                    <div style="width: 15px;"></div>Note from devleopment team:
+                </h2>
+                <p>The admin panel is in the beta stage of development and some features may not work yet or have some
+                    bugs, if you have any questions please contact the senior devleoper at (314) 330-9388</p>
+            </div>
+            <div class="note priority-low">
+                <h2><i class="fa-regular fa-face-smile"></i>
+                    <div style="width: 15px;"></div>New Feature:
+                </h2>
+                <p>The User Logs is a new feature for tracking user activity across the website (ex. user activity on
+                    courses and user clicking on video), if you have any questions please contact the senior devleoper
+                    at (314) 330-9388</p>
+            </div>
+        </section>
+        <section class="tab-section" id="sectionDashboard">
+            <div class="note priority-moderate">
+                <h2><i class="fa-regular fa-face-meh"></i>
+                    <div style="width: 15px;"></div>Note from development team:
+                </h2>
+                <p>The Dashboard currently has no features, if you have any questions please contact the senior
+                    devleoper at (314) 330-9388</p>
+            </div>
+        </section>
+        <section class="tab-section" id="sectionUserLogs">
+            <table class="userlogs" id="userLogsTable">
+                <tbody style="width: 100%;">
+                    <tr class="userlogs-row">
+                        <th>Full name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="app/js/adminPanel/adminPanel.js"></script>
+    <script src="app/js/adminPanel/tabbingSys.js"></script>
+    <script src="app/js/adminPanel/userLogs.js"></script>
+</body>
+
+</html>
