@@ -26,7 +26,7 @@ function login() {
                     ls.setItem('rrnAdminEmail', admin_details[i].email);
                     ls.setItem('rrnAdminProfilePicture', admin_details[i].profilePicture);
 
-                    window.location = 'adminPanel.html'
+                    window.location = 'adminpanel.html'
                 } else {
                     let error = document.getElementById('error');
 

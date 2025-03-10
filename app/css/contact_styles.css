@@ -1,6 +1,8 @@
 .content {
     padding: 0;
     min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .contact-form-container {

@@ -663,4 +663,22 @@
         border-bottom-left-radius: 20%;
         border-bottom-right-radius: 20%;
     }
+
+    .meetthehost-profile,
+    .meetthehost-profile-wide,
+    .meetthehost-profile-wide-reverse {
+        width: 250px;
+        height: 250px;
+        left: calc(50% - 250px / 2);
+    }
+
+    .meetthehost-row,
+    .meetthehost-row-wide,
+    .meetthehost-row-wide-reverse {
+        margin-top: 200px;
+    }
+
+    .meetthehost-row {
+        margin-top: 25px;
+    }
 }

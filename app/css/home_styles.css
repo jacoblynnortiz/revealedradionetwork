@@ -226,16 +226,16 @@
     margin-right: 0;
 }
 
-.recent-video a:hover > h3 {
+.recent-video a:hover>h3 {
     color: var(--accent-color);
 }
 
-.recent-video a:hover > div img {
+.recent-video a:hover>div img {
     transform: scale(1.05);
 }
 
-.recent-video a:hover > div::after,
-.recent-video a:hover > div span {
+.recent-video a:hover>div::after,
+.recent-video a:hover>div span {
     opacity: 1;
 }
 
@@ -254,7 +254,7 @@
 
 .recent-video div img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     transition: .3s;
 }
 
@@ -342,5 +342,16 @@
     .recent-videos h2 a {
         display: inline-block;
         margin-top: 25px;
+    }
+
+    .recent-video div {
+        width: 100%;
+        height: 200px;
+    }
+
+    .listen-spotify-btn,
+    .listen-apple-btn {
+        width: 170px;
+        margin: 5px;
     }
 }

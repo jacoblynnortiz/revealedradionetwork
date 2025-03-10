@@ -108,6 +108,10 @@
     width: 100%;
     max-width: 300px;
     margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .episode-container {
@@ -199,5 +203,14 @@
     #newToOldSwitcher {
         width: 100%;
         max-width: 350px;
+    }
+
+    .show-episodes-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .show-episodes-container a {
+        margin: 0;
     }
 }

@@ -193,9 +193,7 @@
     .header nav {
         padding: 0 20px;
     }
-}
 
-@media screen and (max-width: 1250px) {
     .header .menu-icon {
         display: block;
     }
@@ -220,6 +218,7 @@
         width: 50px;
         padding: 15px;
     }
+
     .header-section:nth-child(4) {
         width: 50px;
         padding: 15px;
@@ -303,4 +302,20 @@
         padding-left: 15px;
     }
 
+}
+
+@media screen and (max-width: 500px) {
+
+    .header-sections {
+        padding: 0;
+    }
+
+    .header-section-logo-center {
+        width: 50%;
+    }
+
+    .header-section-logo-center img {
+        width: 150px;
+        height: 35px;
+    }
 }
