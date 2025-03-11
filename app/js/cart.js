@@ -7,7 +7,20 @@ let cartContainer = document.getElementById('cartContainer');
 // if you do and its value is empty it does nothing but if it isnt empty it hide the empty cart section
 
 if (ls.getItem('rrnCart') == '') {
-    ls.setItem('rrnCart', '');
+    let rrnDefaultCart = [
+        {
+            "itemID": 0,
+            "quantity": 0
+        }
+    ]
+
+    let rrnDefaultCartString = JSON.stringify(rrnDefaultCart)
+
+    localStorage.setItem("rrnCart", rrnDefaultCartString)
+}
+
+if (ls.getItem('rrnCart') == '') {
+    console.log('there is currently no cart')
 } else if (ls.getItem('rrnCart') != '') {
     cartEmptyContainer.style.display = 'none';
     cartContainer.style.display = 'flex';
