@@ -409,7 +409,7 @@
 
 /* userlogs section */
 
-.userlogs {
+.userlogs, .shop-orders {
     width: 100%;
     min-height: 0;
     max-height: calc(100vh - 70px - 30px);
@@ -423,22 +423,22 @@
     flex-direction: column;
 }
 
-.userlogs::-webkit-scrollbar {
+.userlogs::-webkit-scrollbar, .shop-orders::-webkit-scrollbar {
 	width: 5px;
 }
 
-.userlogs-row {
+.userlogs-row, .shop-orders-row {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.userlogs-row:nth-child(even) {
+.userlogs-row:nth-child(even), .shop-orders-row:nth-child(even) {
     background-color: #202020;
 }
 
-.userlogs-row th {
+.userlogs-row th, .shop-orders-row th {
     width: 100%;
     height: 60px;
     border-bottom: 1px solid #333;
@@ -450,11 +450,11 @@
     padding: 0 15px;
 }
 
-.userlogs-row th:nth-child(4) {
+.userlogs-row th:nth-child(4), .shop-orders-row th:nth-child(9) {
     border-right: none;
 }
 
-.userlogs-row td {
+.userlogs-row td, .shop-orders-row td {
     min-height: 60px;
     border-bottom: 1px solid #333;
     border-right: 1px solid #333;
@@ -467,28 +467,28 @@
     padding: 0 15px;
 }
 
-.userlogs-row td:nth-child(4) {
+.userlogs-row td:nth-child(4), .shop-orders-row td:nth-child(4) {
     border-right: none;
 }
 
 @media screen and (max-width: 1200px) {
 
-    .userlogs-row {
+    .userlogs-row, .shop-orders-row {
         display: block;
         border-bottom: 1px solid #333;
     }
 
-    .userlogs td {
+    .userlogs td, .shop-orders td {
         border: none;
     }
 
-    .userlogs td::before {
+    .userlogs td::before, .shop-orders td::before {
         content: attr(data-cell) ": ";
         font-weight: bold;
         padding-right: 5px;
     }
 
-    .userlogs th {
+    .userlogs th, .shop-orders th {
         display: none;
     }
 }

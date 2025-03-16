@@ -150,6 +150,9 @@
 .podcast-card-inner p {
     text-align: center;
     font-size: var(--normalTextSize);
+    max-height: 200px;
+    overflow-y: hidden;
+    color: #c1c1c1;
 }
 
 .podcast-listen {
@@ -316,6 +319,11 @@
 @media screen and (max-width: 950px) {
     .podcasts-container {
         justify-content: center;
+    }
+
+    .podcast-card-inner p {
+        max-height: 10000px;
+        overflow-y: visible;
     }
 }
 

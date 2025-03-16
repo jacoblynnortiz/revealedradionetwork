@@ -46,6 +46,9 @@ tabsContainer.addEventListener('click', (e) => {
         case "sectionDashboard":
             sectionTitle.innerText = 'Dashboard';
             break;
+        case "sectionRRNShop":
+            sectionTitle.innerText = 'RRN Shop';
+            break;
         case "sectionUserLogs":
             sectionTitle.innerText = 'User Logs';
             break;
