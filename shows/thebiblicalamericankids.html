@@ -1,0 +1,51 @@
+<!-- Designed and developed by Jacob Ortiz | Ortiz Design & Development -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revealed Radio Network | The Biblical American Kids Podcast</title>
+    <link rel="icon" href="../res/images/icon.png">
+
+    <link rel="stylesheet" href="../app/css/components/globals.css">
+    <link rel="stylesheet" href="../app/css/components/header_styles.css">
+    <link rel="stylesheet" href="../app/css/show_page_styles.css">
+    <link rel="stylesheet" href="../app/css/components/footer_styles.css">
+</head>
+
+<body>
+    <div id="header" data-pagetype="show"></div>
+    <main class="content">
+        <div class="show-header"
+            style="background: url('/res/images/rrn_podcasts/thebiblicalamericankids-preview.jpeg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        </div>
+        <div class="show-information-container">
+            <h2>The Biblical American Kids Podcast</h2>
+            <span id="videosNumber">null videos</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quas suscipit similique sequi numquam, quasi nisi quia praesentium reprehenderit omnis, necessitatibus esse, totam error in fugit laborum sunt tempora. Eos.</p>
+            <div class="show-buttons-container">
+                <a target="_blank" href="https://www.youtube.com/@revealedradionetwork676" class="rrn-btn">Watch now</a>
+                <select id="newToOldSwitcher">
+                    <option value="newest">Newest to oldest</option>
+                    <option value="oldest">Oldest to newest</option>
+                </select>
+            </div>
+        </div>
+        <div class="show-episodes-container" id="episodesContainerNewest"></div>
+        <div class="show-episodes-container" id="episodesContainerOldest"></div>
+    </main>
+    <div id="footer" data-pagetype="show"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="../app/js/main-subfolder.js"></script>
+    <script src="../app/js/components/header.js"></script>
+    <script src="../app/js/components/footer.js"></script>
+
+    <script src="../app/js/generateEpisodes/theBiblicalAmericanKidsPodastsEpisodes.js"></script>
+</body>
+
+</html>
