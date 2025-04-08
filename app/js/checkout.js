@@ -7,6 +7,9 @@ let completeOrder = document.getElementById('completeOrder');
 
 // all the inputs for checkout
 
+let currentDateInput = document.getElementById('currentDateInput');
+let userCartInput = document.getElementById('userCartInput');
+
 let email = document.getElementById('email');
 let name = document.getElementById('name');
 let address = document.getElementById('address');
@@ -22,6 +25,20 @@ let cardCVC = document.getElementById('cardCVC');
 let cardName = document.getElementById('cardName');
 let cardZipcode = document.getElementById('cardZipcode');
 
+// sets order date to current date
+
+let currentDate = new Date();
+
+let mm = currentDate.getMonth() + 1;
+let dd = currentDate.getDate();
+let yyyy = currentDate.getFullYear();
+
+currentDate = mm + '/' + dd + '/' + yyyy;
+
+currentDateInput.value = currentDate;
+
+userCartInput.value = localStorage.getItem('rrnCart');
+
 // opens and closes the checkout menu
 
 openCheckout.addEventListener('click', function () {
@@ -34,19 +51,20 @@ closeCheckout.addEventListener('click', function () {
 
 // this code will format an email with all the details and open the users email to send the order
 
+let createOrderForm = document.getElementById('createOrderForm');
+
 completeOrder.addEventListener('click', function (e) {
     e.preventDefault();
 
-    let cartItemsString = ls.getItem('rrnCart');
+    fetch(createOrderForm.action, {
+        method: "POST",
+        body: new FormData(createOrderForm),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+        // you can put any JS code here
+        localStorage.removeItem('rrnCart');
+        window.location = 'cart.html', '_blank';
 
-    let userOrder = '{"email": ' + email.value + '},{"name": ' + name.value + '},{"address": ' + address.value + '},{"lotType": ' + lotType.value + '},{"city": ' + city.value + '},{"state": ' + state.value + '},{"zipcode": ' + zipcode.value + '},{"cardNumber": ' + cardNumber.value + '},{"cardExp": ' + cardExp.value + '},{"cardCVC": ' + cardCVC.value + '},{"cardName": ' + cardName.value + '},{"cardZipcode": ' + cardZipcode.value + '},{"userCart": ' + cartItemsString + '}'
-
-    let params = {
-        name: name.value,
-        email: email.value,
-        subject: 'RRN Shop | New order!',
-        message: userOrder
-    }
-
-    emailjs.send('service_zw4jh1w', 'template_jakkjbd', params).then(localStorage.removeItem('rrnCart'));
+    });
 });

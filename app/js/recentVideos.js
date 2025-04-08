@@ -1,7 +1,7 @@
-$.getJSON('https://api.npoint.io/7c772fa40349862754f2', function (recentVideos) {
+$.getJSON('https://sheetdb.io/api/v1/xmscbk6fqyqcm', function (recentVideos) {
     let recentVideosContainer = document.getElementById('recentVideosContainer');
 
-    for (let i = 0; i <= 3; i++) {
+    for (let i = recentVideos.length - 1; i >= recentVideos.length - 3; i--) {
 
         let newRecentVideoContainer = document.createElement('div');
         newRecentVideoContainer.classList.add('recent-video')

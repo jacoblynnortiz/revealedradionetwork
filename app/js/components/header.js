@@ -74,7 +74,7 @@ if (header.dataset.pagetype == 'main') {
                             <ul>
                                 <li><a href="resources.html">Livestreams</a></li>
                                 <li><a href="resources.html">Documentaries</a></li>
-                                <li><a href="resources.html">Literature</a></li>
+                                <li><a href="resources.html">Library</a></li>
                                 <li><a href="resources.html">Kingdom Strategies</a></li>
                             </ul>
                         </li>
@@ -161,7 +161,7 @@ if (header.dataset.pagetype == 'main') {
                             <ul>
                                 <li><a href="../resources.html">Livestreams</a></li>
                                 <li><a href="../resources.html">Documentaries</a></li>
-                                <li><a href="../resources.html">Literature</a></li>
+                                <li><a href="../resources.html">Library</a></li>
                                 <li><a href="../resources.html">Kingdom Strategies</a></li>
                             </ul>
                         </li>

@@ -3,6 +3,10 @@ let password = document.getElementById('passwordInput');
 
 let loginBtn = document.getElementById('loginBtn');
 
+let error = document.getElementById('error');
+
+let usernameSuccess, passwordSuccess;
+
 let ls = localStorage;
 
 loginBtn.addEventListener('click', login);
@@ -16,29 +20,45 @@ window.addEventListener('keypress', function (e) {
 });
 
 function login() {
-    $.getJSON('https://api.npoint.io/a9f669540d60c1696f42', function (admin_details) {
-        for (let i = 0; i < admin_details.length; i++) {
-            if(username.value == admin_details[i].username) {
-                if(password.value == admin_details[i].password) {
-                    ls.setItem('rrnAdminUsername', username.value);
-                    ls.setItem('rrnAdminPassword', password.value);
-                    ls.setItem('rrnAdminFullName', admin_details[i].fullName);
-                    ls.setItem('rrnAdminEmail', admin_details[i].email);
-                    ls.setItem('rrnAdminProfilePicture', admin_details[i].profilePicture);
+    $.getJSON('https://sheetdb.io/api/v1/la8vm18y8v16z/', function (member_details) {
+        for (let i = 0; i < member_details.length; i++) {
+            if(username.value == member_details[i].username) {
 
-                    window.location = 'adminpanel.html'
-                } else {
-                    let error = document.getElementById('error');
+                usernameSuccess = true;
 
-                    error.classList.add('error-active');
-                    error.innerText = 'the entered password is incorrect.';
+                if(password.value == member_details[i].password) {
+
+                    passwordSuccess = true;
+
+                    ls.setItem('truthTabGraniteUsername', username.value);
+                    ls.setItem('truthTabGranitePassword', password.value);
+                    ls.setItem('truthTabGraniteProfilePicture', member_details[i].profilePicture);
+                    ls.setItem('truthTabGraniteName', member_details[i].name);
+                    ls.setItem('truthTabGraniteEmail', member_details[i].email);
+
+                    window.location = 'dashboard.html';
                 }
-            } else {
-                let error = document.getElementById('error');
 
-                error.classList.add('error-active');
-                error.innerText = 'the entered username or password is incorrect.';
+                break;
             }
+        }
+
+        if(usernameSuccess == null && passwordSuccess == null) {
+            error.classList.add('error-active');
+            error.innerText = 'the entered username or password is incorrect.';
+
+            usernameSuccess = null;
+            passwordSuccess = null;
+        }
+        
+        if(usernameSuccess == true && passwordSuccess == null) {
+            error.classList.add('error-active');
+            error.innerText = 'the entered password is incorrect.';
+
+            usernameSuccess = null;
+            passwordSuccess = null;
+        } else {
+            console.log('there was an iternal error.')
         }
     });
 }

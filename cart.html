@@ -53,29 +53,32 @@
             <button class="close-checkout-btn" id="closeCheckout"><i class="fa-solid fa-x"></i></button>
             <div class="checkout-form">
                 <h3>Checkout</h3>
-                <form>
+                <form action="https://sheetdb.io/api/v1/hr0awxntfqfzr" method="post" id="createOrderForm">
                     <h4>Contact</h4>
-                    <input id="email" type="email" required placeholder="E-mail address">
+                    <input id="email" type="email" required placeholder="E-mail address" name="data[email]">
+                    <!-- date and user cart JSON -->
+                    <input style="display: none;" id="currentDateInput" type="email" required name="data[dateOrdered]">
+                    <input style="display: none;" id="userCartInput" type="email" required name="data[userCart]">
                     <h4>Shipping</h4>
-                    <input id="name" type="text" required placeholder="Full name">
-                    <input id="address" type="text" required placeholder="Street address">
-                    <input id="lotType" type="text" placeholder="Apartment, suite, etc. (optional)">
+                    <input id="name" type="text" required placeholder="Full name" name="data[name]">
+                    <input id="address" type="text" required placeholder="Street address" name="data[address]">
+                    <input id="lotType" type="text" placeholder="Apartment, suite, etc. (optional)" name="data[lotType]">
                     <div class="address-input-row">
-                        <input id="city" type="text" required placeholder="City">
-                        <input id="state" type="text" required placeholder="State">
-                        <input id="zipcode" type="text" required placeholder="Zip code">
+                        <input id="city" type="text" required placeholder="City" name="data[city]">
+                        <input id="state" type="text" required placeholder="State" name="data[state]">
+                        <input id="zipcode" type="text" required placeholder="Zip code" name="data[zipcode]">
                     </div>
                     <h4>Payment</h4>
                     <div class="payment-input-container">
                         <div class="payment-input-row">
                             <input id="cardNumber" style="max-width: 55%;" type="number" required minlength="16" maxlength="16"
-                                placeholder="1234 1234 1234 1234">
-                            <input id="cardExp" style="max-width: 22.5%;" type="text" required minlength="5" maxlength="5" placeholder="MM/YY">
-                            <input id="cardCVC" style="max-width: 22.5%;" type="number" required minlength="3" maxlength="3" placeholder="CVC">
+                                placeholder="1234 1234 1234 1234" name="data[cardNumber]">
+                            <input id="cardExp" style="max-width: 22.5%;" type="text" required minlength="5" maxlength="5" placeholder="MM/YY" name="data[cardExp]">
+                            <input id="cardCVC" style="max-width: 22.5%;" type="number" required minlength="3" maxlength="3" placeholder="CVC" name="data[cardCVC]">
                         </div>
                         <div class="payment-input-row">
-                            <input id="cardName" type="text" required placeholder="Full Name">
-                            <input id="cardZipcode" type="number" required placeholder="Zip code">
+                            <input id="cardName" type="text" required placeholder="Full Name" name="data[cardZipcode]">
+                            <input id="cardZipcode" type="number" required placeholder="Zip code" name="data[mainDiscription]">
                         </div>
                     </div>
                     <button id="completeOrder" class="rrn-btn wide">Complete order</button>
@@ -95,16 +98,6 @@
     <script src="app/js/cart.js"></script>
     <script src="app/js/generateSuggestedItems.js"></script>
     <script src="app/js/checkout.js"></script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "BRMpXveNMRzs8qqvl",
-            });
-        })();
-    </script>
 </body>
 
 </html>

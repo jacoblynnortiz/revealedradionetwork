@@ -1,7 +1,7 @@
 const postsContainer = document.getElementById('postsContainer');
 
-$.getJSON('https://api.npoint.io/3b19db1cde3d21143487', function (rrnNewsPosts) {
-    for (let i = 0; i <= 10; i++) {
+$.getJSON('https://sheetdb.io/api/v1/qjnk20ujq0955', function (rrnNewsPosts) {
+    for (let i = rrnNewsPosts.length - 1; i >= rrnNewsPosts.length - rrnNewsPosts.length; i--) {
         let newPostContainer = document.createElement('div');
 
         newPostContainer.classList.add('post-container');
@@ -88,19 +88,34 @@ function createDesktopPost(newPostContainer, rrnNewsPosts, i) {
     category2.innerText = rrnNewsPosts[i].categories[1];
     category3.innerText = rrnNewsPosts[i].categories[2];
 
+    let postCategoriesRaw = rrnNewsPosts[i].categories;
+    let postCategories;
+
+    postCategoriesRaw = rrnNewsPosts[i].categories;
+
+    if (postCategoriesRaw.indexOf(',') > -1) {
+        postCategories = postCategoriesRaw.split(',');
+    }
+
     if (rrnNewsPosts[i].categories[0] != null) {
-        category1.innerText = rrnNewsPosts[i].categories[0];
+        category1.innerText = postCategories[0];
         postCategoriesList.appendChild(category1);
+        if (category1.innerText == 'undefined')
+            postCategoriesList.removeChild(category3);
     }
 
     if (rrnNewsPosts[i].categories[1] != null) {
-        category1.innerText = rrnNewsPosts[i].categories[1];
+        category2.innerText = postCategories[1];
         postCategoriesList.appendChild(category2);
+        if (category2.innerText == 'undefined')
+            postCategoriesList.removeChild(category3);
     }
 
     if (rrnNewsPosts[i].categories[2] != null) {
-        category1.innerText = rrnNewsPosts[i].categories[2];
+        category3.innerText = postCategories[2];
         postCategoriesList.appendChild(category3);
+        if (category3.innerText == 'undefined')
+            postCategoriesList.removeChild(category3);
     }
 
     postDesktopContainer.appendChild(postTitle);
@@ -170,7 +185,17 @@ function createMobilePost(newPostContainer, rrnNewsPosts, i) {
 
     postCategoryContainer.classList.add('categories');
     postCategoryContainer.style.width = '100%';
-    postCategoryListItem.innerText = rrnNewsPosts[i].categories[0];
+
+    let postCategoriesRaw = rrnNewsPosts[i].categories;
+    let postCategories;
+
+    postCategoriesRaw = rrnNewsPosts[i].categories;
+
+    if (postCategoriesRaw.indexOf(',') > -1) {
+        postCategories = postCategoriesRaw.split(',');
+    }
+
+    postCategoryListItem.innerText = postCategories[0];
 
     postTitle.innerText = rrnNewsPosts[i].mainTitle;
     postSrc.href = rrnNewsPosts[i].newsletterSrc;
