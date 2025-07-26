@@ -11,7 +11,8 @@ if (footer.dataset.pagetype == 'main') {
                     <div class="footer-logo">
                         <a href="index.html"><img src="res/images/logo-header.png" alt="#"></a>
                     </div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nesciunt tempore ratione! Deserunt eum exercitationem dignissimos quas odit quisquam aut nulla dolor, magni porro voluptates illo quaerat distinctio! Pariatur, suscipit?</p>
+                    <p>Follow the Truth. Join the Movement.
+📲<br>Connect with us on Instagram, Facebook, X, YouTube, Rumble, TikTok, and more.</p>
                     <div class="rrn-socials">
                         <a class="socials-link" href="https://www.facebook.com/RevealedRadioNetwork"><i class="fa-brands fa-facebook"></i></a>
                         <a class="socials-link" href="https://www.instagram.com/revealedradionetwork/"><i class="fa-brands fa-instagram"></i></a>
@@ -63,9 +64,8 @@ if (footer.dataset.pagetype == 'main') {
                     <div class="footer-logo">
                         <a href="../index.html"><img src="../res/images/logo-header.png" alt="#"></a>
                     </div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nesciunt tempore ratione!
-                        Deserunt eum exercitationem dignissimos quas odit quisquam aut nulla dolor, magni porro
-                        voluptates illo quaerat distinctio! Pariatur, suscipit?</p>
+                    <p>Follow the Truth. Join the Movement.
+📲<br>Connect with us on Instagram, Facebook, X, YouTube, Rumble, TikTok, and more.</p>
                     <div class="rrn-socials">
                         <a class="socials-link" href="https://www.facebook.com/RevealedRadioNetwork"><i
                                 class="fa-brands fa-facebook"></i></a>
