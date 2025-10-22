@@ -1,0 +1,425 @@
+.content {
+    padding: 0;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+.landing-logo {
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: landingLogoFadeOut 2s 8s forwards ease-out;
+}
+
+@keyframes landingLogoFadeOut {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+        display: none;
+    }
+}
+
+/* page content starts here */
+
+/* home hero */
+
+.revealedacademy-home-hero {
+    width: 100%;
+    min-height: 100px;
+    height: 750px;
+    position: relative;
+    background-image: url('../../res/images/revealedacademy-homehero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.revealedacademy-home-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(93, 0, 159, 0.475), rgba(0, 0, 255, 0.583));
+}
+
+.revealedacademy-home-hero .col-1,
+.revealedacademy-home-hero .col-2 {
+    width: 100%;
+    max-width: 800px;
+    z-index: 2;
+    margin-bottom: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.revealedacademy-home-hero .col-1 {
+    align-items: flex-start;
+    margin-right: 55px;
+}
+
+.revealedacademy-home-hero h3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    color: #fff;
+    font-size: 2.2rem;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.revealedacademy-home-hero h2 {
+    width: 100%;
+    max-width: 35ch;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.revealedacademy-home-hero h3::before,
+.revealedacademy-home-hero h3::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    width: 20px;
+    height: 5px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.revealedacademy-home-hero h3::after {
+    left: auto;
+    right: -35px;
+}
+
+.revealedacademy-home-hero .action-btns {
+    width: 100%;
+    max-width: 400px;
+    min-height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.revealedacademy-home-hero .action-btns a {
+    width: 100%;
+    max-width: 200px;
+    height: 45px;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    border: 3px solid #fff;
+    font-size: 1.2rem;
+    transition: .3s;
+}
+
+.revealedacademy-home-hero .action-btns a:nth-child(1) {
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.revealedacademy-home-hero .action-btns a:nth-child(2) {
+    margin-right: 0;
+    background-color: var(--accent-color);
+    border: 3px solid var(--accent-color);
+    color: #fff;
+}
+
+.revealedacademy-home-hero .action-btns a:nth-child(1):hover {
+    border: 3px solid var(--accent-color);
+    color: var(--accent-color);
+}
+.revealedacademy-home-hero .action-btns a:nth-child(2):hover {
+    border: 3px solid #3c63b9;
+    background-color: #3c63b9;
+}
+
+.revealedacademy-home-hero .col-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.revealedacademy-home-hero .col-2 iframe {
+    width: calc(10000px / 16);
+    height: calc(3000px / 9);
+    border-radius: var(--roundedCorners);
+}
+
+.wave {
+    width: 200%;
+    height: 350px;
+    overflow: hidden;
+    line-height: 0;
+    background: transparent;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    transform: rotateY(360deg);
+    background: transparent;
+    z-index: 2;
+}
+
+@media screen and (max-width: 700px) {
+
+    .revealedacademy-home-hero h2 {
+        margin-bottom: 30px;
+    }
+
+    .revealedacademy-home-hero .action-btns {
+        flex-direction: column;
+    }
+
+    .revealedacademy-home-hero .action-btns a {
+        max-width: 300px;
+    }
+
+    .revealedacademy-home-hero .action-btns a:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* featured courses styling */
+
+.featured-courses-section {
+    width: 100%;
+    min-height: 500px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+.featured-courses-section h4 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.featured-courses-section h3 {
+    margin-bottom: 45px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.featured-courses {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 300px;
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.featured-courses-card {
+    width: 100%;
+    max-width: 380px;
+    min-height: 500px;
+    margin: 0 25px;
+    border-radius: var(--roundedCorners);
+    background-color: var(--secondary-color);
+    transition: .3s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.featured-courses-card:hover {
+    box-shadow: 0 10px 10px #000;
+}
+
+.featured-courses-card .course-banner {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: var(--roundedCorners);
+    border-top-right-radius: var(--roundedCorners);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .featured-courses-card .course-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    border-top-left-radius: var(--roundedCorners);
+    border-top-right-radius: var(--roundedCorners);
+    z-index: 2;
+} */
+
+.featured-courses-card .course-banner .wave {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+}
+
+.featured-courses-card .course-banner .category {
+    padding: 7.5px 15px;
+    border-radius: 22px;
+    color: #fff;
+    background-color: rgba(60, 124, 185, 0.50);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+}
+
+.featured-courses-card a {
+    color: var(--accent-color);
+}
+
+.featured-courses-card a:hover {
+    text-decoration: underline;
+}
+
+.featured-courses-card h4 {
+    padding: 15px;
+}
+
+.duration-and-users {
+    width: 100%;
+    max-width: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: grey;
+    padding: 0 15px;
+}
+
+.featured-courses-card .written-and-category {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 95%;
+    min-height: 125px;
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.featured-courses-card .written-and-category img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 7.5px;
+    margin-right: 15px;
+}
+
+.featured-courses-card .written-and-category span {
+    font-weight: bolder;
+    color: var(--accent-color);
+    padding: 0 5px;
+}
+
+.featured-courses-section p {
+    color: grey;
+    line-height: 1.8;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.featured-courses-section p a {
+    color: var(--accent-color);
+}
+
+.featured-courses-section p a:hover {
+    text-decoration: underline;
+}
+
+/* next section styling */
+
+.next-section {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1350px) {
+    .featured-courses-card {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .revealedacademy-home-hero .col-2 {
+        display: none;
+    }
+
+    .revealedacademy-home-hero .col-1 {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0
+    }
+
+    .revealedacademy-home-hero .col-1 h3 {
+        justify-content: center;
+    }
+
+    .revealedacademy-home-hero .action-btns {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .revealedacademy-home-hero .action-btns {
+        max-width: 90%;
+    }
+
+    .revealedacademy-home-hero .action-btns a {
+        max-width: 300px;
+    }
+}

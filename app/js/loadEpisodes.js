@@ -1,6 +1,7 @@
 let podcastDataJSON;
 let podcastName;
 let podcastAbout;
+let podcastAboutShort;
 let podcastCoverPhoto;
 
 let windowTitle = 'Revealed Radio Network | ';
@@ -11,24 +12,28 @@ let coverPhoto = document.getElementById('coverPhoto');
 let podcastTitle = document.getElementById('podcastTitle');
 let podcastDiscription = document.getElementById('podcastDiscription');
 
+let showAllDiscription = document.getElementById('showAllDiscription');
+
+let discriptionRevealed = false;
+
 // determins which podcast to load based on the URL
 
 if (document.URL == 'https://revealedradionetwork.site/show.html#theoracle' || document.URL == 'https://revealedradionetwork.site/show.html#theoracle' || document.URL == 'http://127.0.0.1:5500/show.html#theoracle' || document.URL == 'http://127.0.0.1:5500/show.html#theoracle') {
-    podcastDataJSON = 'https://api.npoint.io/6037308b5a66a8c69980';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/7u0bj75hc0n2e';
     podcastName = 'The Oracle';
     podcastAbout = `The Oracle with John R. Wilson III is a deep and thought-provoking podcast where Pastor John Wilson explores the essence, nature, and identity of God, the profound truths of His Kingdom, and the realities of life. With biblical insight and spiritual wisdom, each episode unveils the mysteries of Scripture while offering practical applications to help you walk in blessing, purpose, joy, and victory. Tune in as Pastor Wilson delivers revelation that will strengthen your faith and illuminate your path.`;
     podcastCoverPhoto = 'https://iili.io/F4dYsHb.jpg';
 
     loadEpisodes();
 } else if (document.URL == 'https://revealedradionetwork.site/show.html#therevealedreport' || document.URL == 'https://revealedradionetwork.site/show.html#therevealedreport' || document.URL == 'http://127.0.0.1:5500/show.html#therevealedreport' || document.URL == 'http://127.0.0.1:5500/show.html#therevealedreport') {
-    podcastDataJSON = 'https://api.npoint.io/f0c6937151ed27045c14';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/ndxmp4t6jlvbp';
     podcastName = 'The Revealed Report';
     podcastAbout = `In a world filled with spin and deception, The Revealed Report cuts through the noise. Join John R. Wilson III for bold yet compassionate news analysis—hard-hitting, factual, and free of the foul language and corruption found in much of today’s media. With a mix of humor, insight, and godly wisdom, John dives deep into history, politics, world affairs, and culture, exposing lies and revealing truth from a biblical perspective. Stay informed. Stay grounded. Welcome to The Revealed Report.`;
     podcastCoverPhoto = 'https://iili.io/F4K3LoG.jpg';
 
     loadEpisodes();
 } else if (document.URL == 'https://revealedradionetwork.site/show.html#thefirmfoundation' || document.URL == 'https://revealedradionetwork.site/show.html#thefirmfoundation' || document.URL == 'http://127.0.0.1:5500/show.html#thefirmfoundation' || document.URL == 'http://127.0.0.1:5500/show.html#thefirmfoundation') {
-    podcastDataJSON = 'https://api.npoint.io/b93c5a3417476343452f';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/vr3um2xhhhmll';
     podcastName = 'The Firm Foundation';
     podcastAbout = `Built on the Word. Anchored in Truth. Strengthened for Life.
 
@@ -55,7 +60,7 @@ Weekly episodes on the Revealed Radio Network—strength for your walk, and hope
 
     loadEpisodes();
 } else if (document.URL == 'https://revealedradionetwork.site/show.html#strengthtocarrythroughwithkaylaskinner' || document.URL == 'https://revealedradionetwork.site/show.html#strengthtocarrythroughwithkaylaskinner' || document.URL == 'http://127.0.0.1:5500/show.html#strengthtocarrythroughwithkaylaskinner' || document.URL == 'http://127.0.0.1:5500/show.html#strengthtocarrythroughwithkaylaskinner') {
-    podcastDataJSON = 'https://api.npoint.io/2429b7e1d67fa4b33e4e';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/7mv60bvaa9bby';
     podcastName = 'Strength to Carry Through with Kayla Skinner';
     podcastAbout = `In a world filled with anxiety, adversity, and overwhelming pressure, it’s easy to feel like giving up. But what if the pain you’ve walked through was never meant to break you—but to build the strength to carry others?
 
@@ -69,7 +74,7 @@ Because sometimes, just hearing “You’re not alone” is the strength someone
 
     loadEpisodes();
 } else if (document.URL == 'https://revealedradionetwork.site/show.html#thebiblicalamericankids' || document.URL == 'https://revealedradionetwork.site/show.html#thebiblicalamericankids' || document.URL == 'http://127.0.0.1:5500/show.html#thebiblicalamericankids' || document.URL == 'http://127.0.0.1:5500/show.html#thebiblicalamericankids') {
-    podcastDataJSON = 'https://api.npoint.io/80ca41790c5e141aca9b';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/6dba9pjq7l8h0';
     podcastName = 'The Biblical American Kid’s Podcast';
     podcastAbout = `Faith. Freedom. Fun. From a Kid’s Point of View!
 
@@ -93,7 +98,7 @@ Tune in each week on the Revealed Radio Network, and let your kids discover how 
 
     loadEpisodes();
 } else if (document.URL == 'https://revealedradionetwork.site/show.html#getinthegamewithjesus' || document.URL == 'https://revealedradionetwork.site/show.html#getinthegamewithjesus' || document.URL == 'http://127.0.0.1:5500/show.html#getinthegamewithjesus' || document.URL == 'http://127.0.0.1:5500/show.html#getinthegamewithjesus') {
-    podcastDataJSON = 'https://api.npoint.io/bbf99a242218ee3b72d9';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/2k45bdta4s76d';
     podcastName = 'Get In The Game with Jesus';
     podcastAbout = `It’s time for kids to stop sitting on the sidelines—and start living for Jesus!
 
@@ -113,7 +118,7 @@ Join Levi every week on the Revealed Radio Network as he helps kids everywhere l
 
     loadEpisodes();
 } else if (document.URL == 'https://revealedradionetwork.site/show.html#kingdomadventureswithmrnoodlesthebibledoodle' || document.URL == 'https://revealedradionetwork.site/show.html#kingdomadventureswithmrnoodlesthebibledoodle' || document.URL == 'http://127.0.0.1:5500/show.html#kingdomadventureswithmrnoodlesthebibledoodle' || document.URL == 'http://127.0.0.1:5500/show.html#kingdomadventureswithmrnoodlesthebibledoodle') {
-    podcastDataJSON = 'https://api.npoint.io/7a2aed81e07f4538dd5c';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/nbzgqllakxni9';
     podcastName = 'Kingdom Adventures with Mr. Noodles the Bible Doodle';
     podcastAbout = `Where Giggles Meet the Gospel and Kids Discover the Kingdom!
 
@@ -143,7 +148,7 @@ Let’s doodle through the Bible together!
 
     loadEpisodes();
 } else if (document.URL == 'https://revealedradionetwork.site/show.html#revealedkidsbedtimestories' || document.URL == 'https://revealedradionetwork.site/show.html#revealedkidsbedtimestories' || document.URL == 'http://127.0.0.1:5500/show.html#revealedkidsbedtimestories' || document.URL == 'http://127.0.0.1:5500/show.html#revealedkidsbedtimestories') {
-    podcastDataJSON = 'https://api.npoint.io/a64562f89e713b680ec2';
+    podcastDataJSON = 'https://sheetdb.io/api/v1/fo66a4dl8sjpt';
     podcastName = 'Revealed Kids Bedtime Stories';
     podcastAbout = `Snuggle in. Wind down. Grow in God’s Word.
 
@@ -181,13 +186,35 @@ Because every child deserves to fall asleep wrapped in truth.
     window.location.href = 'index.html';
 }
 
+showAllDiscription.addEventListener('click', toggleDiscription);
+
+function toggleDiscription() {
+    if (discriptionRevealed == true) {
+        showAllDiscription.innerText = 'Show more';
+        podcastDiscription.innerText = podcastAboutShort;
+        discriptionRevealed = false;
+    } else {
+        showAllDiscription.innerText = 'Show less';
+        podcastDiscription.innerText = podcastAbout;
+        discriptionRevealed = true;
+    }
+}
+
 function loadEpisodes() {
 
     document.title = windowTitle + podcastName;
 
     podcastTitle.innerText = podcastName;
 
-    podcastDiscription.innerText = podcastAbout;
+    if(podcastAbout.length > 300) {
+        podcastAboutShort = podcastAbout.substring(0, 300);
+        showAllDiscription.style.display = 'flex';
+        discriptionRevealed = false;
+
+        podcastDiscription.innerText = podcastAboutShort;
+    } else {
+        podcastDiscription.innerText = podcastAbout;
+    }
 
     coverPhoto.style.background = 'url("' + podcastCoverPhoto + '")';
     coverPhoto.style.backgroundRepeat = 'no-repeat';
@@ -224,6 +251,10 @@ function loadEpisodes() {
             newEpisodeTitle.innerText = podcastData[i].videoTitle;
             newEpisodeDate.innerText = podcastData[i].videoDate;
 
+            if(podcastData[i].videoTime == 'Premiere' || podcastData[i].videoTime == 'Live') {
+                newEpisodeTime.style.backgroundColor = '#ff3a3a7c';
+            }
+
             newEpisodeContainer.appendChild(newEpisodeThumbnail);
             newEpisodeThumbnail.appendChild(newEpisodeTime);
             newEpisodeContainer.appendChild(newEpisodeTitle);
@@ -250,6 +281,10 @@ function loadEpisodes() {
             newEpisodeTime.innerText = podcastData[i].videoTime;
             newEpisodeTitle.innerText = podcastData[i].videoTitle;
             newEpisodeDate.innerText = podcastData[i].videoDate;
+            
+            if(podcastData[i].videoTime == 'Premiere' || podcastData[i].videoTime == 'Live') {
+                newEpisodeTime.style.backgroundColor = '#ff3a3a7c';
+            }
 
             newEpisodeContainer.appendChild(newEpisodeThumbnail);
             newEpisodeThumbnail.appendChild(newEpisodeTime);

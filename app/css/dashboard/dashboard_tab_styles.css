@@ -2,30 +2,45 @@
 
 .dashboard-content {
     width: 100%;
-    display: flex;
-    gap: 15px;
 }
 
-.dashboard-content>div {
+.tab-row-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.dashboard-content .tab-row-section>div {
     width: 100%;
     min-height: 100px;
     border: 1px solid #333;
     border-radius: var(--roundedCorners);
     padding: 15px;
     position: relative;
+    min-height: 500px;
 }
 
-.dashboard-content>div:nth-child(2) {
+.dashboard-content .tab-row-section>div:nth-child(2) {
     width: 50%;
+    margin-left: 15px;
 }
 
-.dashboard-content div h3 {
+.dashboard-content .tab-row-section:nth-child(2) {
+    justify-content: flex-start;
+}
+
+.dashboard-content .tab-row-section:nth-child(2)>div {
+    width: 66%;
+}
+
+.dashboard-content .tab-row-section div h3 {
     text-align: center;
     font-size: 1.4rem;
     margin-bottom: 20px;
 }
 
-.dashboard-content div .new-tag {
+.dashboard-content .tab-row-section div .new-tag {
     display: inline-flex;
     position: absolute;
     top: 15px;
@@ -36,7 +51,7 @@
     border-radius: var(--roundedCorners);
 }
 
-.dashboard-content div form {
+.dashboard-content .tab-row-section div form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,8 +76,8 @@
     background-color: var(--primary-color);
 }
 
-.dashboard-content div input[type="text"],
-.dashboard-content div textarea {
+.dashboard-content .tab-row-section div input[type="text"],
+.dashboard-content .tab-row-section div textarea {
     width: 100%;
     max-width: 400px;
     height: 45px;
@@ -83,19 +98,19 @@
     max-width: 90%;
 }
 
-.dashboard-content div textarea {
+.dashboard-content .tab-row-section div textarea {
     height: 225px;
     padding: 7.5px 15px;
     resize: none;
 }
 
-.dashboard-content div input[type="text"]:focus,
-.dashboard-content div textarea:focus {
+.dashboard-content .tab-row-section div input[type="text"]:focus,
+.dashboard-content .tab-row-section div textarea:focus {
     border-bottom: 2px solid #333;
     background-color: #ffffff10;
 }
 
-.dashboard-content div input[type="submit"] {
+.dashboard-content .tab-row-section div input[type="submit"] {
     width: 100%;
     max-width: 400px;
     height: 45px;
@@ -110,9 +125,32 @@
     transition: 0.3s;
 }
 
-.dashboard-content div input[type="submit"]:hover,
-.dashboard-content div input[type="submit"]:focus {
+.dashboard-content .tab-row-section div input[type="submit"]:hover,
+.dashboard-content .tab-row-section div input[type="submit"]:focus {
     background-color: #ffffff10;
+}
+
+#podcastChanger * {
+    background-color: #131313;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #333;
+}
+
+#podcastChanger {
+    width: 100%;
+    max-width: 400px;
+    padding: 7.5px 15px;
+    background-color: transparent;
+    color: #888888;
+    font-size: 1.2rem;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 7.5px;
+    margin-left: 0;
+    border: 1px solid #333;
 }
 
 .drag-area {
@@ -165,6 +203,33 @@
 
 .drag-drop-content span input[type="file"] {
     display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .tab-row-section:nth-child(1) {
+        flex-direction: column;
+    }
+
+
+    .dashboard-content .tab-row-section>div:nth-child(2) {
+        width: 100%;
+    }
+
+    .dashboard-content .tab-row-section:nth-child(2)>div {
+        width: 100%;
+    }
+
+    .dashboard-content .tab-row-section>div {
+        margin-bottom: 15px;
+    }
+
+    .dashboard-content .tab-row-section>div:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .dashboard-content .tab-row-section {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 900px) {

@@ -46,6 +46,21 @@
     line-height: 1.6;
 }
 
+.show-all-discription {
+    margin-top: 7.5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.show-all-discription:hover {
+    text-decoration: underline;
+}
+
 .show-buttons-container {
     width: 100%;
     min-height: 80px;
