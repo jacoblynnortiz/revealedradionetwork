@@ -164,39 +164,40 @@
                 <h2><i class="fa-regular fa-face-smile"></i>
                     <div style="width: 15px;"></div>Note from development team:
                 </h2>
-                <p>The Dashboard currently has some new features! the upload truth dispatch and upload recent videos
-                    modules is now available, if you have any questions please contact the senior devleoper
+                <p>The Dashboard currently has some new features! Try out the Upload Podcast Episodes section! If you have any questions please contact the senior devleoper
                     at (314) 330-9388</p>
             </div>
             <div class="dashboard-content">
-                <div>
-                    <div class="new-tag">New!</div>
-                    <h3>Upload Truth Dispatch</h3>
-                    <form action="https://sheetdb.io/api/v1/qjnk20ujq0955" id="uploadTruthDispatch" method="post">
-                        <div class="form-row">
-                            <div class="col1">
-                                <input type="text" required placeholder="Enter Title" name="data[mainTitle]">
-                                <textarea placeholder="Enter Discription" name="data[mainDiscription]"></textarea>
-                            </div>
-                            <div class="col2">
-                                <input type="text" required placeholder="Enter Newsletter URL"
-                                    name="data[newsletterSrc]">
-                                <input id="coverPhotoInput" required placeholder="Enter Cover Photo URL" type="text"
-                                    name="data[postCover]">
-                                <input type="text" required placeholder="Enter Short Title" name="data[shortTitle]">
-                                <input type="text" required placeholder="Enter Short Discription"
-                                    name="data[shortDiscription]">
-                                <input type="text" required placeholder="Enter Categories (ex. food, cars)"
-                                    name="data[categories]">
+                <div class="tab-row-section">
+                    <div>
+                        <div class="new-tag">New!</div>
+                        <h3>Upload Revealed Dispatch</h3>
+                        <form action="https://sheetdb.io/api/v1/qjnk20ujq0955" id="uploadTruthDispatch" method="post">
+                            <div class="form-row">
+                                <div class="col1">
+                                    <input type="text" required placeholder="Enter Title" name="data[mainTitle]">
+                                    <textarea placeholder="Enter Discription" name="data[mainDiscription]"></textarea>
+                                </div>
+                                <div class="col2">
+                                    <input type="text" required placeholder="Enter Newsletter URL"
+                                        name="data[newsletterSrc]">
+                                    <input id="coverPhotoInput" required placeholder="Enter Cover Photo URL" type="text"
+                                        name="data[postCover]">
+                                    <input type="text" required placeholder="Enter Short Title" name="data[shortTitle]">
+                                    <input type="text" required placeholder="Enter Short Discription"
+                                        name="data[shortDiscription]">
+                                    <input type="text" required placeholder="Enter Categories (ex. food, cars)"
+                                        name="data[categories]">
 
-                                <input style="display: none;" id="authorPhotoInput" type="text"
-                                    name="data[authorPhoto]">
-                                <input style="display: none;" id="writtenByInput" type="text" name="data[writtenBy]">
-                                <input style="display: none;" id="publishedOnInput" type="text"
-                                    name="data[publishedOn]">
+                                    <input style="display: none;" id="authorPhotoInput" type="text"
+                                        name="data[authorPhoto]">
+                                    <input style="display: none;" id="writtenByInput" type="text"
+                                        name="data[writtenBy]">
+                                    <input style="display: none;" id="publishedOnInput" type="text"
+                                        name="data[publishedOn]">
+                                </div>
                             </div>
-                        </div>
-                        <!-- <div class="drag-area">
+                            <!-- <div class="drag-area">
                             <label for="dragDropTruthDispatch" id="dropZoneTruthDispatch" class="drag-drop-zone">
                                 <div id="dragDropTruthDispatchContent" class="drag-drop-content">
                                     <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -204,17 +205,16 @@
                                 </div>
                             </label>
                         </div> -->
-                        <input type="submit" value="Post">
-                    </form>
-                </div>
-                <div>
-                    <div class="new-tag">New!</div>
-                    <h3>Upload Recent Videos</h3>
-                    <form action="https://sheetdb.io/api/v1/xmscbk6fqyqcm" id="uploadRecentVideos" method="post">
-                        <input type="text" required placeholder="Enter Title" name="data[videoTitle]">
-                        <input type="text" required placeholder="Enter Thumbnail" name="data[videoThumbnail]">
-                        <input type="text" required placeholder="Enter Video URL" name="data[videoSrc]">
-                        <!-- <div class="drag-area">
+                            <input type="submit" value="Post">
+                        </form>
+                    </div>
+                    <div>
+                        <h3>Upload Recent Videos</h3>
+                        <form action="https://sheetdb.io/api/v1/xmscbk6fqyqcm" id="uploadRecentVideos" method="post">
+                            <input type="text" required placeholder="Enter Title" name="data[videoTitle]">
+                            <input type="text" required placeholder="Enter Thumbnail" name="data[videoThumbnail]">
+                            <input type="text" required placeholder="Enter Video URL" name="data[videoSrc]">
+                            <!-- <div class="drag-area">
                             <label for="dragDropThumbnail" id="dropZoneThumbnail" class="drag-drop-zone">
                                 <div id="dragDropThumbnailContent" class="drag-drop-content">
                                     <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -222,8 +222,46 @@
                                 </div>
                             </label>
                         </div> -->
-                        <input type="submit" value="Post">
-                    </form>
+                            <input type="submit" value="Post">
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-row-section">
+                    <div>
+                        <div class="new-tag">New!</div>
+                        <h3>Upload Podcast Episodes</h3>
+                        <form id="podcastUploadForm" action="https://sheetdb.io/api/v1/ndxmp4t6jlvbp">
+                            <div class="form-row">
+                                <div class="col1">
+                                    <input type="text" required placeholder="Enter Title" name="data[videoTitle]">
+                                    <textarea placeholder="Enter Discription"
+                                        name="data[videoDiscription]"></textarea>
+
+                                </div>
+                                <div class="col2">
+                                    <select id="podcastChanger">
+                                        <option value="0">Choose Podcast...</option>
+                                        <option value="1">The Revealed Report</option>
+                                        <option value="2">The Oracle</option>
+                                        <option value="3">The Firm Foundation</option>
+                                        <option value="4">Strength to Carry Through</option>
+                                        <option value="5">The Biblical American Kids Podcast</option>
+                                        <option value="6">Get in the Game with Jesus</option>
+                                        <option value="7">Kingdom Adventures with Mr. Noodles</option>
+                                        <option value="8">Revealed Kids Bedtime Stories</option>
+                                    </select>
+                                    <input type="text" required id="checkSelectedPodcast" style="display:  none;">
+                                    <input type="text" required placeholder="Enter Video URL" name="data[videoSrc]">
+                                    <input type="text" required placeholder="Enter Thumbnail URL"
+                                        name="data[videoThumbnail]">
+                                    <input type="text" required placeholder="Enter Video Length" name="data[videoTime]">
+                                    <input type="text" required placeholder="Enter Date" name="data[videoDate]">
+
+                                </div>
+                            </div>
+                            <input type="submit" value="Post">
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -232,7 +270,10 @@
                 <h2><i class="fa-regular fa-face-meh"></i>
                     <div style="width: 15px;"></div>Note from development team:
                 </h2>
-                <p>The RRN Shop currently is not selling any items, the available features here show the current orders and daily revenue and perctage of sales compared to yesterday, also the monthly revenue and percentage of sales compared to the previous month, more updates coming soon, if you have any questions please contact the senior
+                <p>The RRN Shop currently is not selling any items, the available features here show the current orders
+                    and daily revenue and perctage of sales compared to yesterday, also the monthly revenue and
+                    percentage of sales compared to the previous month, more updates coming soon, if you have any
+                    questions please contact the senior
                     devleoper at (314) 330-9388</p>
             </div>
             <div class="rrn-shop-content">
@@ -242,7 +283,8 @@
                     <h2>Monthly Revenue</h2>
                     <span id="monthlyDate">Jan 1 - Feb 1, 2025</span>
                     <div class="profit">
-                        <div class="icon"><i class="fa-solid fa-calendar-days"></i></div><span id="monthlyRevenueValue">$0</span>
+                        <div class="icon"><i class="fa-solid fa-calendar-days"></i></div><span
+                            id="monthlyRevenueValue">$0</span>
                     </div>
                 </div>
                 <div class="quick-view">
@@ -367,11 +409,12 @@
     <!-- <script src="app/js/adminPanel/fileUpload.js"></script> -->
     <script src="app/js/dashboard/uploadRecentVideos.js"></script>
     <script src="app/js/dashboard/uploadTruthDispatch.js"></script>
+    <script src="app/js/dashboard/uploadPodcast.js"></script>
 
     <script src="app/js/dashboard/calcMonthlyRevenue/calcCurrentMonth.js"></script>
     <script src="app/js/dashboard/calcMonthlyRevenue/calcPreviousMonth.js"></script>
 
-    
+
     <script src="app/js/dashboard/calcDailyRevenue/calcToday.js"></script>
     <script src="app/js/dashboard/calcDailyRevenue/calcYesterday.js"></script>
 
