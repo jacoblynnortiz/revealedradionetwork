@@ -1,0 +1,81 @@
+<!-- Designed and developed by Jacob Ortiz | Ortiz Design & Development -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revealed Radio Network | Title</title>
+    <link rel="icon" href="res/images/icon.png">
+
+    <link rel="stylesheet" href="app/css/components/globals.css">
+    <link rel="stylesheet" href="app/css/components/header_styles.css">
+    <link rel="stylesheet" href="app/css/watch_styles.css">
+    <link rel="stylesheet" href="app/css/components/footer_styles.css">
+</head>
+
+<body>
+    <div id="header" data-pagetype="main"></div>
+    <main class="content">
+        <div id="watchContainer" class="watch-container defaultMode">
+            <div class="video-area-container">
+                <div class="video-area">
+                    <div class="video-gradient-effect"></div>
+                    <div class="video-src" id="videoSrc"><iframe frameborder="0"></iframe></div>
+                    <h2 id="videoTitle"></h2>
+                    <h3 id="videoPostDate"></h3>
+                    <p id="videoDiscription"></p>
+
+                    <div class="video-actions">
+                        <button id="changeViewMode" title="Theater mode" class="watch-page-btn viewing-mode-btn">View
+                            Mode <span></span><i class="fa-solid fa-expand"></i></button>
+                        <div class="share-video-area">
+                            <div id="shareOptions" class="share-options">
+                                <button id="closeShareOptions" class="close-share-options"><i
+                                        class="fa-solid fa-x"></i></button>
+                                <h4>Share</h4>
+                                <div class="share-platforms">
+                                    <a id="shareOptionCopy" href="javascript:void(0)">
+                                        <div class="platform">
+                                            <i class="fa-solid fa-link" style="color: lightgrey;"></i>
+                                            <span>Copy</span>
+                                        </div>
+                                    </a>
+                                    <a id="shareOptionX" href="#">
+                                        <div class="platform">
+                                            <i class="fa-brands fa-x-twitter" style="color: #fff;"></i>
+                                            <span>X</span>
+                                        </div>
+                                    </a>
+                                    <a id="shareOptionFacebook" href="#">
+                                        <div class="platform">
+                                            <i class="fa-brands fa-facebook" style="color: #0866ff;"></i>
+                                            <span>Facebook</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <button id="shareVideoBtn" title="Share" class="watch-page-btn">Share <span></span><i
+                                    class="fa-solid fa-share"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar" id="sideBar"></div>
+        </div>
+    </main>
+    <div id="footer" data-pagetype="main"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script src="app/js/main.js"></script>
+    <script src="app/js/loadSideBar.js"></script>
+    <script src="app/js/loadWatchPage.js"></script>
+    <script src="app/js/shareOptions.js"></script>
+    <script src="app/js/components/header.js"></script>
+    <script src="app/js/components/footer.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,31 @@
     <link rel="stylesheet" href="app/css/components/globals.css">
     <link rel="stylesheet" href="app/css/dashboard/admin_login_styles.css">
 </head>
+
 <body>
     <div class="login-container">
         <div class="login-form">
-                <input type="text" placeholder="username" id="usernameInput" required>
-                <input type="password" placeholder="password" id="passwordInput" required>
-                <input type="submit" value=">" id="loginBtn">
-            <div class="error" id="error"></div>
+            <div class="dashboard-logo"></div>
+            <h2>Dashboard</h2>
+            <h3>Admin Panel Login</h3>
+            <div class="form-components">
+                <div class="username">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <input type="text" placeholder="username" id="usernameInput" required>
+                </div>
+                <div class="password">
+                    <div class="icon"><i class="fa-solid fa-key"></i></div>
+                    <input type="password" placeholder="password" id="passwordInput" required>
+                </div>
+                <input type="submit" value="Login" id="loginBtn">
+                <div class="error" id="error"></div>
+            </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    
+
     <script src="app/js/login.js"></script>
 </body>
+
 </html>

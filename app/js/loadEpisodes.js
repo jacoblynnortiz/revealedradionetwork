@@ -244,8 +244,36 @@ function loadEpisodes() {
             newEpisodeContainer.classList.add('episode-container');
             newEpisodeThumbnail.classList.add('episode-thumbnail');
 
-            newEpisodeSrc.href = podcastData[i].videoSrc;
-            newEpisodeSrc.setAttribute('target', "_blank");
+            let videoIDPartial1;
+            switch(podcastName) {
+                case 'The Revealed Report': videoIDPartial1 = '001'; break;
+                case 'The Oracle': videoIDPartial1 = '002'; break;
+                case 'The Firm Foundation': videoIDPartial1 = '003'; break;
+                case 'Strength to Carry Through with Kayla Skinner': videoIDPartial1 = '004'; break;
+                case 'The Biblical American Kid’s Podcast': videoIDPartial1 = '005'; break;
+                case 'Get In The Game with Jesus': videoIDPartial1 = '006'; break;
+                case 'Kingdom Adventures with Mr. Noodles the Bible Doodle': videoIDPartial1 = '007'; break;
+                case 'Revealed Kids Bedtime Stories': videoIDPartial1 = '008'; break;
+            }
+
+            let videoIDTrueEpisodeID = i + 1;
+
+            if (videoIDTrueEpisodeID < 10) {
+                videoIDTrueEpisodeID = '0000' + videoIDTrueEpisodeID;
+            } else if (videoIDTrueEpisodeID < 100) {
+                videoIDTrueEpisodeID = '000' + videoIDTrueEpisodeID;
+            } else if (videoIDTrueEpisodeID < 1000) {
+                videoIDTrueEpisodeID = '00' + videoIDTrueEpisodeID;
+            } else if (videoIDTrueEpisodeID < 10000) {
+                videoIDTrueEpisodeID = '0' + videoIDTrueEpisodeID;
+            } else if (videoIDTrueEpisodeID > 99999) {
+                console.log('there has been an unimaginable error!')
+            }
+
+            let videoIDPartial2 = '' + videoIDTrueEpisodeID;
+            let videoID = videoIDPartial1 + videoIDPartial2;
+
+            newEpisodeSrc.href = 'watch.html?v=' + videoID;
             newEpisodeThumbnail.style.backgroundImage = 'url(' + podcastData[i].videoThumbnail + ')'
             newEpisodeTime.innerText = podcastData[i].videoTime;
             newEpisodeTitle.innerText = podcastData[i].videoTitle;

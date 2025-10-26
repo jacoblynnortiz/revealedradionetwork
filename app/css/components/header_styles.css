@@ -74,11 +74,12 @@
     justify-content: flex-start;
     align-items: center;
     padding-left: 15px;
+    padding-top: 10px;
 }
 
 .logo img {
-    width: calc(849px / 5);
-    height: calc(180px / 5);
+    width: calc(180px / 1.5);
+    height: calc(180px / 2);
 }
 
 .links {
@@ -315,7 +316,7 @@
     }
 
     .header-section-logo-center img {
-        width: 150px;
-        height: 35px;
+        width: calc(180px / 1.5);
+        height: calc(180px / 2);
     }
 }

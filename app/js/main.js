@@ -39,7 +39,7 @@ function runMain() {
     
         // Retrieving the string
         let cartItemsString = localStorage.getItem("rrnCart")
-    
+
         // turns string back into JSON
         let cartItems = JSON.parse(cartItemsString);
     

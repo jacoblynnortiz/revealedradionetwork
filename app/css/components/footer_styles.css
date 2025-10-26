@@ -46,8 +46,8 @@
 }
 
 .footer-logo img {
-    width: calc(849px / 5);
-    height: calc(180px / 5);
+    width: calc(180px / 1.5);
+    height: calc(180px / 2);
 }
 
 .footer-col:nth-child(1) p {

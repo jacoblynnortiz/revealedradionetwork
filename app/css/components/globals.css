@@ -44,7 +44,7 @@ body {
 	animation-fill-mode: forwards;
 	overflow-x: hidden;
 	/* off white background shows on sides of content if screen is over 1080p */
-    background-color: var(--backgroundDark-color);
+    background-image: linear-gradient(var(--primary-color), var(--backgroundDark-color));
 }
 
 /* main container for content of page */
