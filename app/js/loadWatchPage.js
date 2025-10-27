@@ -61,6 +61,8 @@ function assembleWatchPage(podcastChannelID, podcastVideoID) {
             // code goes here
 
             videoSrc.innerHTML = podcastData[podcastVideoID].videoSrc;
+            videoSrc.firstChild.src = videoSrc.firstChild.src + "?autoplay=1&rel=0";
+
             videoTitle.innerText = podcastData[podcastVideoID].videoTitle;
             videoPostDate.innerText = podcastData[podcastVideoID].videoDate;
             videoDiscription.innerText = podcastData[podcastVideoID].videoDiscription;
