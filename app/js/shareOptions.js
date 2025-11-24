@@ -7,11 +7,11 @@ let shareOptionFacebook = document.getElementById('shareOptionFacebook');
 let shareOptionX = document.getElementById('shareOptionX');
 
 openShareOptionsBtn.addEventListener('click', function () {
-    shareOptions.style.display = 'flex';
+  shareOptions.style.display = 'flex';
 });
 
 closeShareOptionsBtn.addEventListener('click', function () {
-    shareOptions.style.display = 'none';
+  shareOptions.style.display = 'none';
 });
 
 // create share links

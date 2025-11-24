@@ -42,6 +42,12 @@ document.getElementById("podcastChanger").onchange = function () {
     } else {
         alert('an errror occured, please contact support.')
     }
+
+    let podcastEpisodeUUID = document.getElementById('podcastEpisodeUUID');
+
+    $.getJSON(podcastUploadForm.action, function (podcastData) {
+        podcastEpisodeUUID.value = podcastData.length;
+    });
 };
 
 podcastUploadForm.addEventListener("submit", e => {

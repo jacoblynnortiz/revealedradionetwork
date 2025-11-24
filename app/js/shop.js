@@ -18,7 +18,7 @@ if (ls.getItem('rrnCart') == '') {
 // renders the shop items based on what category you clicked
 
 if (document.URL == 'https://revealedradionetwork.site/shop.html#all' || document.URL == 'https://revealedradionetwork.site/shop.html' || document.URL == 'http://127.0.0.1:5500/shop.html#all' || document.URL == 'http://127.0.0.1:5500/shop.html') {
-    $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
+    $.getJSON('app/js/rrnShopItems.json', function (rrnShopItems) {
         let shopItemsContainer = document.getElementById('shopItemsContainer');
 
         document.title = 'RRN Shop | All';
@@ -52,7 +52,7 @@ if (document.URL == 'https://revealedradionetwork.site/shop.html#all' || documen
         }
     });
 } else if (document.URL == 'https://revealedradionetwork.site/shop.html#books' || document.URL == 'http://127.0.0.1:5500/shop.html#books') {
-    $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
+    $.getJSON('app/js/rrnShopItems.json', function (rrnShopItems) {
         let shopItemsContainer = document.getElementById('shopItemsContainer');
 
         document.title = 'RRN Shop | Books';
@@ -126,7 +126,7 @@ function addItem(itemID) {
 
     addItemPopup.classList.add('pop');
 
-    $.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
+    $.getJSON('app/js/rrnShopItems.json', function (rrnShopItems) {
         for (let i = 0; i < rrnShopItems.length; i++) {
             if (newCartItem.itemID == rrnShopItems[i].itemID) {
                 addItemPopPreview.src = rrnShopItems[i].itemImagePreview;

@@ -36,6 +36,9 @@
 .shop-header h2 {
     position: relative;
     z-index: 2;
+    font-size: 3rem;
+    color: var(--foregroundLight-color);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .shop-header h2::before,

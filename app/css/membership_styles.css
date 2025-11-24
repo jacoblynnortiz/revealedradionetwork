@@ -1,0 +1,124 @@
+.content {
+    padding: 0;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+.membership-header {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background: url('../../res/images/headers/membership-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.membership-header::before {
+    content: '';
+    background-color: #00000070;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    z-index: 1;
+}
+
+.membership-header h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    color: var(--foregroundLight-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.membership-header h2::before,
+.membership-header h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    width: 20px;
+    height: 5px;
+    border-radius: 12px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.membership-header h2::after {
+    left: auto;
+    right: -35px;
+}
+
+.note {
+    width: 90%;
+    padding: 15px;
+    color: #fff;
+    margin: 25px 0;
+    background-color: rgb(51, 13, 0);
+    border-left: 4px solid rgb(248, 150, 86);
+}
+
+.memberships {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.membership {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.membership:nth-child(1) {
+    width: 100%;
+    align-items: center;
+}
+
+.membership div {
+    width: 400px;
+    height: 400px;
+    border-radius: var(--roundedCorners);
+    border: 2px solid var(--accent-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.membership div img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--roundedCorners);
+}
+
+.membership h3 {
+    max-width: 25ch;
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 12px;
+}
+
+.membership span {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}

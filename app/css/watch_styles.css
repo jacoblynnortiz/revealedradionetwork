@@ -85,9 +85,41 @@
 .video-actions {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+}
+
+.video-actions .main-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.video-actions .main-actions .like-btn {
+    min-width: 75px;
+    margin-left: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-actions .main-actions .like-btn svg {
+    margin-right: 7.5px;
+}
+
+.video-actions .main-actions .like-btn:hover {
+    color: var(--accent-color);
+}
+
+.video-liked {
+    color: var(--accent-color) !important;
+}
+
+.video-actions .side-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* styling for the watch page buttons */

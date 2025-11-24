@@ -8,6 +8,9 @@ let videoDiscription = document.getElementById('videoDiscription');
 let changeViewMode = document.getElementById('changeViewMode');
 let currentViewingMode = 'default';
 
+let podcastChannelID, podcastVideoID;
+let podcastDatabaseLink;
+
 
 function getUrlID(url) {
     try {
@@ -28,10 +31,10 @@ console.log("Video ID:", videoID); // Output: Product ID: 456
 deconstructVideoID(videoID)
 
 function deconstructVideoID(videoID) {
-    let podcastChannelID = videoID.substring(0, 3);
+    podcastChannelID = videoID.substring(0, 3);
     podcastChannelID = podcastChannelID.replace(/^0+/, '');
 
-    let podcastVideoID = videoID.substring(4, 9);
+    podcastVideoID = videoID.substring(4, 9);
     podcastVideoID = podcastVideoID.replace(/^0+/, '');
     podcastVideoID = parseInt(podcastVideoID) - 1;
 
@@ -43,7 +46,6 @@ function deconstructVideoID(videoID) {
 }
 
 function assembleWatchPage(podcastChannelID, podcastVideoID) {
-    let podcastDatabaseLink;
 
     switch (podcastChannelID) {
         case '1': podcastDatabaseLink = 'https://sheetdb.io/api/v1/ndxmp4t6jlvbp'; break;

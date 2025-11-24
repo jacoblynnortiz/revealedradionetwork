@@ -36,8 +36,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    color: #fff;
     font-size: 3rem;
+    color: var(--foregroundLight-color);
+    font-family: 'Times New Roman', Times, serif;
     position: relative;
     z-index: 2;
 }

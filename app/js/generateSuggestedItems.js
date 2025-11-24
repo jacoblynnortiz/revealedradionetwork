@@ -1,4 +1,4 @@
-$.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
+$.getJSON('app/js/rrnShopItems.json', function (rrnShopItems) {
     let suggestedItemsContainer = document.getElementById('suggestedItemsContainer');
 
     for (let i = 0; i < rrnShopItems.length; i++) {

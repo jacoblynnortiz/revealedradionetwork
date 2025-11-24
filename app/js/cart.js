@@ -44,7 +44,7 @@ let totalItems = [];
 let cartItemsAmount = 0;
 let cartItemsQuantity = 0;
 
-$.getJSON('https://api.npoint.io/3f6afb2c8cacee7231a2', function (rrnShopItems) {
+$.getJSON('app/js/rrnShopItems.json', function (rrnShopItems) {
     for (let i = 0; i < cartItems.length; i++) {
 
         let cartItem = document.createElement('div');
