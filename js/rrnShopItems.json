@@ -1,0 +1,47 @@
+[
+  {
+    "itemID": 0,
+    "itemSrc": "shop.html#books",
+    "itemImagePreview": "https://iili.io/F5HNeKG.md.png",
+    "itemTitle": "The Final Flame",
+    "itemPrice": 20.00,
+    "category": "books",
+    "suggested": true
+  },
+    {
+    "itemID": 1,
+    "itemSrc": "shop.html#books",
+    "itemImagePreview": "https://iili.io/F4FDKzB.md.png",
+    "itemTitle": "A Living Sacrifice",
+    "itemPrice": 20.00,
+    "category": "books",
+    "suggested": true
+  },
+    {
+    "itemID": 2,
+    "itemSrc": "shop.html#books",
+    "itemImagePreview": "https://iili.io/F4FDn0g.md.jpg",
+    "itemTitle": "Blessed & Broke",
+    "itemPrice": 20.00,
+    "category": "books",
+    "suggested": true
+  },
+    {
+    "itemID": 3,
+    "itemSrc": "shop.html#books",
+    "itemImagePreview": "https://iili.io/F4FDzdJ.md.png",
+    "itemTitle": "A Lamb Masked Beast",
+    "itemPrice": 25.00,
+    "category": "books",
+    "suggested": true
+  },
+    {
+    "itemID": 4,
+    "itemSrc": "shop.html#books",
+    "itemImagePreview": "https://iili.io/KSqB6ve.md.png",
+    "itemTitle": "Revealed Kids Bedtime Stories",
+    "itemPrice": 20.00,
+    "category": "books",
+    "suggested": false
+  }
+]
