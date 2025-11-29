@@ -3,7 +3,7 @@ let openShareOptionsBtn = document.getElementById('shareVideoBtn');
 // copy link share button
 const shareData = {
   title: "Revealed Radio Network",
-  text: "Check out this awesome content from Revealed Radio Network",
+  text: "",
   url: document.URL,
 };
 
