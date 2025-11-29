@@ -174,77 +174,7 @@
 
 .share-video-area {
     position: relative;
-}
-
-
-.share-options {
-    width: 90vw;
-    max-width: 500px;
-    height: 200px;
-    border-radius: var(--roundedCorners);
-    background-color: #222;
-    border: 2px solid #333;
-    position: absolute;
-    top: -215px;
-    right: 0;
-    z-index: 3;
-    display: none;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    padding: 15px;
-}
-
-.close-share-options {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.share-options h4 {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    margin-bottom: 15px;
-}
-
-.share-platforms {
-    width: 100%;
-    height: 125px;
-    overflow-x: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.share-platforms::-webkit-scrollbar {
-    height: 5px;
-}
-
-.share-platforms .platform {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 25px;
-    margin-bottom: 15px;
-    cursor: pointer;
-}
-
-.share-platforms .platform svg {
-    font-size: 2.6rem;
-}
-
-.share-platforms .platform span {
-    margin-top: 15px;
-    color: #fff;
-}
+} 
 
 .watch-container .video-area-container .video-area .viewing-mode-btn:hover {
     cursor: pointer;
