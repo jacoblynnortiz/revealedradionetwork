@@ -88,6 +88,7 @@ function assembleWatchPage(podcastChannelID, podcastVideoID) {
 
             if (videoDiscription.innerText == 'No Discription Available.' || videoDiscription.innerText == '') {
                 videoDiscription.style.fontStyle = 'italic';
+                videoDiscription.innerText = 'No Discription Available.';
                 videoDiscription.style.color = '#888';
             }
         }
