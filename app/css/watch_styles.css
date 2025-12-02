@@ -102,6 +102,7 @@
     width: 100%;
     max-width: 100ch;
     margin-bottom: 35px;
+    line-height: 1.8;
 }
 
 .video-actions {
